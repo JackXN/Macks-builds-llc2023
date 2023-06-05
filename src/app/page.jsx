@@ -10,20 +10,13 @@ import Homepage from '../Layouts/Homepage';
 export default function Home() {
   let construction = false;
 
-  if (construction) {
-    return (
-      <div>
-   <Construction/>
-      </div>
-    );
-  } else {
-    return (
-      <>
-        {/* <MobileNav />
+return (
+  <>
+          {/* <MobileNav />
         <DesktopNav /> */}
         <Homepage/>
-        {/* Include the rest of your homepage content */}
+
       </>
     );
-  }
+  
 }
