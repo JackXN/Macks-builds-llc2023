@@ -23,8 +23,8 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = useState(null);
   const [scrollPos, setScrollPos] = useState(0);
-  const [bgColor, setBgColor] = useState(null);
-  // const [logoColor, setLogoColor] = useState("./assets/images/Logo.png");
+  const [bgColor, setBgColor] = useState('orange');
+//   const [logoColor, setLogoColor] = useState("./assets/images/Logo.png");
   let Link = Scroll.Link;
 
   //! OnScroll Function
@@ -41,15 +41,15 @@ const Navbar = () => {
   }, []);
 
   // ! On scroll also needs to change logo color
-  // useEffect(() => {
-  //   if (scrollPos > 0) {
-  //     setBgColor("#E04C4C");
-  //     setLogoColor("/LogoWhite.png");
-  //   } else {
-  //     setBgColor(null);
-  //     setLogoColor("/Logo.png");
-  //   }
-  // }, [scrollPos]);
+  useEffect(() => {
+    if (scrollPos > 0) {
+      setBgColor("#E04C4C");
+
+    } else {
+      setBgColor(null);
+    
+    }
+  }, [scrollPos]);
 
   return (
     <Flex
@@ -58,15 +58,15 @@ const Navbar = () => {
       justifyContent="center"
       wrap="wrap"
       // padding="1.5rem"
-      // bg={colorMode === "light" ? "transparent" : "teal.500"}
-      bg={bgColor}
+
+    //   bg={bgColor}
       padding="20px"
-      borderRadius="20px"
+    //   borderRadius="20px"
       color="white"
       // position="absolute"
       position="sticky"
       transition="background-color 0.5s ease-out"
-      top={90}
+      top={0}
       right={0}
       left={0}
       zIndex={4}
