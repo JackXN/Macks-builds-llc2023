@@ -6,12 +6,9 @@ import {Text} from '@chakra-ui/react';
 import HomePage from '../Layouts/Homepage';
 
 export default function Home() {
-  let construction = false;
-
 return (
   <>
-          {/* <MobileNav />
-        <DesktopNav /> */}
+        
         <HomePage/>
 
       </>

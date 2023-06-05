@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './styles';
 import {Box, Text,Container, Button, Flex} from '@chakra-ui/react';
 import Counter from './Counter';
-
+// import 'boxicons';
 
 
 
@@ -40,7 +40,6 @@ const Index = () => {
             color='#D9C05B'
             bg='none'            
             >Our Projects
-            <box-icon name='right-arrow-alt' color='#D9C05B' style={{marginLeft: '15px'}}></box-icon>
             </Button>
         </Box>
 

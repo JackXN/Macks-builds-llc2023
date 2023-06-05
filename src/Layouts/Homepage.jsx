@@ -14,7 +14,7 @@ backgroundSize='cover'
 backgroundRepeat='no-repeat'
 >
 <MobileNav />
-        {/* <DesktopNav /> */}
+        
 <Hero/>
 </Box>
 </>
