@@ -31,23 +31,27 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPos(window.pageYOffset);
+      if (typeof window !== "undefined") {
+        setScrollPos(window.pageYOffset);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
-  // ! On scroll also needs to change logo color
   useEffect(() => {
     if (scrollPos > 0) {
       setBgColor("#E04C4C");
-
     } else {
       setBgColor(null);
-    
     }
   }, [scrollPos]);
 
