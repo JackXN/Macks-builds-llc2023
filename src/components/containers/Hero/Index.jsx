@@ -12,7 +12,7 @@ const Index = () => {
   return (
   <Box
   height='100vh'
-//   backgroundImage='./HeroBgTwo.png'
+  backgroundImage='./HeroBgTwo.png'
   backgroundPosition='center'
   backgroundSize='cover'
   backgroundRepeat='no-repeat'
