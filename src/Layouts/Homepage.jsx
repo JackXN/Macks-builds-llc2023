@@ -7,6 +7,7 @@ import {Box, Text,Container} from '@chakra-ui/react';
 
 
 import ServicesHome from '../components/containers/Services/ServicesHome';
+import AboutHome from '../components/containers/About/AboutHome';
 
 const Homepage = () => {
   return (
@@ -17,9 +18,9 @@ backgroundSize='cover'
 backgroundRepeat='no-repeat'
 >
 <MobileNav />
-        
 <Hero/>
 <ServicesHome/>
+<AboutHome/>
 </Box>
 </>
   )
