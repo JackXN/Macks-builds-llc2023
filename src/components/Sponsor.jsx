@@ -23,7 +23,7 @@ const images = [
 
 const Sponsor = () => {
   return (
-    <Box mt='50px'>
+    <Box mt='150px'>
       <h3>We Proudly Support</h3>
       <Box sx={styles.logoContainer}>
         {images.map((item, index) => (

@@ -8,7 +8,7 @@ import {Box, Text,Container} from '@chakra-ui/react';
 
 import ServicesHome from '../components/containers/Services/ServicesHome';
 import AboutHome from '../components/containers/About/AboutHome';
-
+import HomeProjects from '../components/containers/Projects/HomeProjects';
 const Homepage = () => {
   return (
 <>
@@ -21,6 +21,7 @@ backgroundRepeat='no-repeat'
 <Hero/>
 <ServicesHome/>
 <AboutHome/>
+<HomeProjects/>
 </Box>
 </>
   )
