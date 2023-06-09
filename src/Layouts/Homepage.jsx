@@ -8,8 +8,8 @@ import ServicesHome from '../components/containers/Services/ServicesHome';
 import AboutHome from '../components/containers/About/AboutHome';
 import HomeProjects from '../components/containers/Projects/HomeProjects';
 import Sponsor from '../components/Sponsor';
-
-
+import Testimonial from '../components/Testimonial';
+import FAQ from '../components/FAQ';
 const Homepage = () => {
   return (
 <>
@@ -24,6 +24,11 @@ backgroundRepeat='no-repeat'
 <AboutHome/>
 <Box backgroundColor='#232632' textAlign='center' height='100%'  pt='50px'>
 <HomeProjects/>
+
+  <Text as='h3' >Testimonials</Text>
+  <Text as='h1' color='white'>See What Our Customers <br/> Are Saying About Us</Text>
+<Testimonial/>
+<FAQ/>
 </Box>
 </Box>
 </>

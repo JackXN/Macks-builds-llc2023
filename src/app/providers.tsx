@@ -2,6 +2,9 @@
 'use client'
 
 
+// Tailwind
+// import 'tailwindcss/tailwind.css';
+
 // Chakra
 import { CacheProvider } from '@chakra-ui/next-js';
 import { ChakraProvider } from '@chakra-ui/react';
