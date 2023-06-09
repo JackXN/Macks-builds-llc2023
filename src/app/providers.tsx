@@ -8,7 +8,6 @@ import { ChakraProvider } from '@chakra-ui/react';
 import {extendTheme } from '@chakra-ui/react';
 
 
-
 // Fonts
 import '@fontsource/bungee';
 import '@fontsource/lato';
@@ -34,7 +33,8 @@ const breakpoints = [
         "h1": {
           fontSize: ['35px'],
           fontFamily: 'Lato',
-          fontWeight:'black'
+          fontWeight:'black',
+          
         },
         'h3': {
           color: 'orange',
