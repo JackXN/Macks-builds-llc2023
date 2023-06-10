@@ -49,7 +49,7 @@ const TestimonialSlider = () => {
 
   return (
    <Box>
-      <Flex flexWrap='wrap' direction={['column', 'column', 'row']} spacing={3} justifyContent='center' mt={['90px']} >
+      <Flex flexWrap='wrap'  spacing={3} justifyContent='center' mt={['90px']} >
         {testimonials.map((testimonial, index) => (
           <Testimonial key={index} {...testimonial} />
         ))}

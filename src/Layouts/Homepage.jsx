@@ -24,10 +24,11 @@ backgroundRepeat='no-repeat'
 <AboutHome/>
 <Box backgroundColor='#232632' textAlign='center' height='100%'  pt='50px'>
 <HomeProjects/>
-
+<Box mt='50px'>
   <Text as='h3' >Testimonials</Text>
   <Text as='h1' color='white'>See What Our Customers <br/> Are Saying About Us</Text>
 <Testimonial/>
+</Box>
 
 <Box bg='white' pt='50px'>
   <FAQ/>
