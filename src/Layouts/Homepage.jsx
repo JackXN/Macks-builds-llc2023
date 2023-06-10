@@ -28,7 +28,10 @@ backgroundRepeat='no-repeat'
   <Text as='h3' >Testimonials</Text>
   <Text as='h1' color='white'>See What Our Customers <br/> Are Saying About Us</Text>
 <Testimonial/>
-<FAQ/>
+
+<Box bg='white' pt='50px'>
+  <FAQ/>
+</Box>
 </Box>
 </Box>
 </>

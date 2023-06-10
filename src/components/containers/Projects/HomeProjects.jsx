@@ -1,73 +1,63 @@
 import React from 'react';
-import { Box, Container, Text, Image, Flex } from '@chakra-ui/react';
+import { Box, Container, Text, Image } from '@chakra-ui/react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import data from './data';
 import 'swiper/css';
+import data from './data';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-const ResponsiveSwiper = () => {
+const SmoothScrollingSwiper = () => {
   return (
-    <Box mt={['150px']}>
-      <Box sx={styles.textContainer}>
-        <Text as='h3'>Our Projects</Text>
-        <Text as='h1' color='white'>Featured Projects</Text>
+    <Box mt="150px">
+      <Container maxW="container.lg">
+        <Text as="h3" textAlign="center">
+          Our Projects
+        </Text>
+        <Text as="h1" textAlign="center" color="white" mt="4">
+          Featured Projects
+        </Text>
         <Swiper
-          slidesPerView={2}
-          spaceBetween={5}
+          spaceBetween={2}
           navigation
           pagination={{ clickable: true }}
           autoplay
           loop
+          speed={500}
+          grabCursor
+          mousewheel
+          breakpoints={{
+            // When window width is <= 768px (mobile view)
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            // When window width is > 768px (desktop view)
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 2,
+            },
+          }}
+          className="smooth-scrolling-swiper"
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <Box sx={styles.projectBox}>
-                <Box sx={styles.imageContainer(item.images[0])} />
-   
-                  {/* <Text as='p'>{item.category}</Text> */}
-                  {/* <Text as='h1'>{item.title}</Text> */}
-                  {/* <Text as='p'>{item.date}</Text> */}
-                
+              <Box
+                p="4"
+                rounded="lg"
+                textAlign="left"
+                height="400px"
+                width="300px"
+                _hover={{ transform: 'translateY(-5px)', transition: 'transform 0.3s ease' }}
+              >
+                <Image src={item.images[0]} alt={item.title} objectFit="cover" height="100%" width="100%" />
               </Box>
             </SwiperSlide>
           ))}
         </Swiper>
-      </Box>
+      </Container>
     </Box>
   );
 };
 
-const styles = {
-  textContainer: {
-    position: 'relative',
-    bottom: ['50px'],
-    textAlign: 'center',
-  },
-  projectBox: {
-    background: 'white',
-    margin: '30px',
-    textAlign: 'left',
-    display: 'flex',
-    width: '100%',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '400px',
-    width: '300px',
-  },
-  infoContainer: {
-    padding: '30px',
-  },
-  imageContainer: (image) => ({
-    backgroundImage: `url(${image})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    height: '200%',
-    width: '200%',
-  }),
-};
-
-export default ResponsiveSwiper;
+export default SmoothScrollingSwiper;

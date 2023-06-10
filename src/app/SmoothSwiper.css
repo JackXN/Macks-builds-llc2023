@@ -1,0 +1,33 @@
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: grab;
+  }
+  
+  .swiper-container:hover {
+    cursor: grabbing;
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    user-select: none;
+  }
+  
+  .swiper-slide {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    margin-right: 10px;
+  }
+  
+  .swiper-scrollbar {
+    width: 100%;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  
