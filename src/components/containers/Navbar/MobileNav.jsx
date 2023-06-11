@@ -61,9 +61,10 @@ const Navbar = () => {
       alignItems="center"
       justifyContent="center"
       wrap="wrap"
+      // bg='242632'
       // padding="1.5rem"
 
-    //   bg={bgColor}
+      // bg={bgColor}
       padding="20px"
     //   borderRadius="20px"
       color="white"
@@ -80,7 +81,7 @@ const Navbar = () => {
         <IconButton
           icon={<HamburgerIcon />}
           aria-label="Toggle navigation"
-          color="black"
+          color="white"
           background="none"
           transition="all 0.5s ease-in-out"
           _hover={{ transform: "scale(1.1)" }}
@@ -97,17 +98,19 @@ const Navbar = () => {
         justifyContent="center"
         alignItems="center"
         position="relative"
+        
       >
         {/* <Text as='h1' fontFamily='Bangers' color='black'>ITE <br/> SMITHS</Text> */}
         <Image
             src='./Logo.png'
             transition="src 0.5s ease-in"
             alt="Something"
-            height="50%"
-            width="50%"
+            height="70%"
+            width="70%"
             alignSelf="center"
             position="relative"
             right={["25px"]}
+            marginLeft='30px'
           />
       </Box>
 
@@ -119,18 +122,19 @@ const Navbar = () => {
         finalFocusRef={null}
       >
         <DrawerOverlay />
-        <DrawerContent bg="#E04C4C">
-          <DrawerCloseButton color="orange" />
+        <DrawerContent bg="rgba(0,0,0,0.3)">
+          <DrawerCloseButton color='white' />
           <DrawerBody
             display="flex"
             flexDirection="column"
             fontSize={"35px"}
             padding={"30px"}
             margin={"30px"}
-            color="orange"
-            bg="#E04C4C"
+            color="white"
+            fontWeight='bold'
+            bg="rgba(0,0,0,0)"
             borderRadius="20px"
-            fontFamily="bangers"
+            fontFamily="Lato"
           >
             <Link
               activeClass="active"
@@ -140,9 +144,9 @@ const Navbar = () => {
               offset={50}
               duration={500}
               cursor="pointer"
-              color="black"
+              sx={styles.linkTag}
             >
-              Home
+          Home
             </Link>
             <Link
               activeClass="active"
@@ -152,6 +156,7 @@ const Navbar = () => {
               offset={50}
               duration={500}
               cursor="pointer"
+              
             >
               About Us
             </Link>
@@ -162,7 +167,7 @@ const Navbar = () => {
               smooth={true}
               offset={50}
               duration={500}
-              cursor="pointer"
+           
             >
               Services
             </Link>
@@ -197,18 +202,30 @@ const Navbar = () => {
               offset={50}
               duration={500}
               cursor="pointer"
+              _hover={{ transform: 'translateY(-8px)', boxShadow: 'xl black', cursor: 'pointer' }}
             >
               Gallery
             </Link>
+            <h1>Hello</h1>
           </DrawerBody>
+
         </DrawerContent>
+        <h1>Hello</h1>
       </Drawer>
 
-      <Flex align="center"></Flex>
+      <Flex align="center">
+       
+      </Flex>
    
     </Flex>
 
   );
 };
+
+const styles = {
+  linkTag: {
+    color: 'orange'
+  }
+}
 
 export default Navbar;

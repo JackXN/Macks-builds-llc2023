@@ -10,6 +10,7 @@ import HomeProjects from '../components/containers/Projects/HomeProjects';
 import Sponsor from '../components/Sponsor';
 import Testimonial from '../components/Testimonial';
 import FAQ from '../components/FAQ';
+import DesktopHero from '../components/containers/Hero/DesktopHero';
 const Homepage = () => {
   return (
 <>
@@ -18,8 +19,11 @@ backgroundPosition='center'
 backgroundSize='cover'
 backgroundRepeat='no-repeat'
 >
-<MobileNav />
-<Hero/>
+  <Box backgroundImage='./HeroBgTwo.png' backgroundPosition='center' backgroundRepeat='no-repeat' backgroundSize='cover' backgroundAttachment='fixed'>
+<MobileNav/>
+</Box>
+
+<DesktopHero/>
 <ServicesHome/>
 <AboutHome/>
 <Box backgroundColor='#232632' textAlign='center' height='100%'  pt='50px'>

@@ -12,7 +12,7 @@ import Sponsor from '../../Sponsor';
 
 const AboutHome = () => {
   return (
-    <Container height='100%' background='white' display='flex' justifyContent='center' alignItems='center' flexDirection='column'>
+    <Container height='100%' background='white' display='flex' justifyContent='center' alignItems='center' flexDirection='column' id='about'>
     <Box sx={styles.title}>
     <Text as='h3'>About Us</Text>
     <Text as='h1'>High Quality Construction Solutions & Reliable Contractors</Text>

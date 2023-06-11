@@ -4,6 +4,7 @@ import styles from './styles';
 import {Box, Text,Container, Button, Flex} from '@chakra-ui/react';
 import Counter from './Counter';
 // import 'boxicons';
+import MobileNav from '../Navbar/MobileNav';
 
 
 
@@ -12,6 +13,7 @@ const Index = () => {
   return (
   <Box
   height='100vh'
+
   backgroundImage='./HeroBgTwo.png'
   backgroundPosition='center'
   backgroundSize='cover'
@@ -21,6 +23,7 @@ const Index = () => {
   flexDirection='column'
   justifyContent='center'
   alignItems='center'
+  zIndex={1}
   >
 
     <Box sx={styles.textContainer}>
