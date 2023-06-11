@@ -1,6 +1,7 @@
 // app/providers.tsx
 'use client'
 
+import 'flowbite';
 
 // Tailwind
 // import 'tailwindcss/tailwind.css';

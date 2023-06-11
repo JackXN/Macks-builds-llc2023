@@ -1,68 +1,56 @@
 import React from 'react';
-import { Box, Container, Text, Image } from '@chakra-ui/react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import data from './data';
+import {Box, Text} from '@chakra-ui/react';
+import 'swiper/swiper.min.css';
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+const images = [
+  '/projects/bathroom/BathroomOne.png',
+  '/projects/bathroom/BathroomTwo.png',
+  '/projects/general/HomeOne.png',
+  '/projects/general/HomeTwo.png',
+  '/projects/outdoor/OutdoorOne.png',
+  '/projects/general/Flooring.png',
+  '/projects/outdoor/OutdoorTwo.png',
+];
 
-const SmoothScrollingSwiper = () => {
+const SwiperComponent = () => {
   return (
-    <Box mt="50px">
-      <Container maxW="container.lg">
-        <Text as="h3" textAlign="center">
-          Our Projects
-        </Text>
-        <Text as="h1" textAlign="center" color="white" mt="4">
-          Featured Projects
-        </Text>
-        <Swiper
-          spaceBetween={2}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay
-          loop
-          speed={200}
-          grabCursor
-          mousewheel
-          breakpoints={{
-            // When window width is <= 768px (mobile view)
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 0,
-            },
-            // When window width is > 768px (desktop view)
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 2,
-            },
-            1220: {
-              slidesPerView: 3,
-              spaceBetween: 4,
-            },
-
-          }}
-          className="smooth-scrolling-swiper"
-        >
-          {data.map((item, index) => (
-            <SwiperSlide key={index}>
-              <Box
-                p="4"
-                rounded="lg"
-                textAlign="left"
-                height="400px"
-                width="370px"
-                _hover={{ transform: 'translateY(-5px)', transition: 'transform 0.3s ease' }}
-              >
-                <Image src={item.images[0]} alt={item.title} objectFit="cover" height="100%" width="100%" />
-              </Box>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Container>
-    </Box>
+    <>
+    <Box mb={['50px']}>
+   <Text as='h3'>Our Work</Text>
+   <Text as='h1' color='white'>Featured Projects</Text>
+   </Box>
+    <Swiper
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      autoplay
+      loop
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }}
+    >
+      {images.map((imageUrl, index) => (
+        <SwiperSlide key={index}>
+          <div style={{ width: '100%', height: '0', paddingBottom: '75%', position: 'relative' }}>
+            <img
+              src={imageUrl}
+              alt={`Slide ${index + 1}`}
+              style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+    </>
   );
 };
 
-export default SmoothScrollingSwiper;
+export default SwiperComponent;
