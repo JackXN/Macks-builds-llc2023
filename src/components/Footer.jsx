@@ -20,35 +20,37 @@ const accounts = [
     url: 'https://linkedin.com/in/muhammad-ahmad20',
     label: 'LinkedIn Account',
     type: 'linkedin',
-    icon: <FaLinkedin />
+    icon: <FaLinkedin /> 
   }
 ];
 
 const Footer = () => {
   return (
     <Stack
-      maxW="5xl"
+      // maxW="5xl"
       marginInline="auto"
       p={8}
       spacing={{ base: 8, md: 0 }}
       justifyContent="space-between"
       alignItems="center"
       direction={{ base: 'column', md: 'row' }}
+      backgroundColor='#242632'
+      mt={['150px']}
     >
       <Link href="https://templateskart.com" isExternal>
-        <Image w="100px" src="/assets/images/layouts/hero_image.png" alt="TemplatesKart" />
+        <Image w="100px" src="/Logo.png" alt="Macks Builds LLC" />
       </Link>
 
       {/* Desktop Screen */}
-      <HStack spacing={4} alignItems="center" d={{ base: 'none', md: 'flex' }}>
+      <HStack spacing={4} color='white' alignItems="center" d={{ base: 'none', md: 'flex' }}>
         {links.map((link, index) => (
           <CustomLink key={index}>{link}</CustomLink>
         ))}
       </HStack>
 
       {/* Mobile and Tablet Screens */}
-      <Stack d={{ base: 'flex', md: 'none' }} alignItems="center">
-        <HStack alignItems="center">
+      <Stack d={{ base: 'flex', md: 'none' }} alignItems="center" color='white'>
+        <HStack alignItems="center" color='white'>
           <CustomLink>Sign up</CustomLink>
           <Divider h="1rem" orientation="vertical" />
           <CustomLink>Blog</CustomLink>
