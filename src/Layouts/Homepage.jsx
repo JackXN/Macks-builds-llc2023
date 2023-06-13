@@ -21,6 +21,7 @@ const Homepage = () => {
         backgroundPosition="center"
         backgroundSize="cover"
         backgroundRepeat="no-repeat"
+        overlfowX='hidden'
       >
         <MobileNav/>
        {/* <DesktopNav/> */}

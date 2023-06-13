@@ -15,6 +15,7 @@ const Index = () => {
   <Box
   height='100vh'
   display={["flex", "flex", "flex", "none", "none"]}
+  padding='50px'
   // display='none'
   backgroundImage='./HeroBgTwo.png'
   backgroundPosition='center'
@@ -26,7 +27,6 @@ const Index = () => {
   alignItems='center'
   zIndex={1}
   >
-
     <Box sx={styles.textContainer}>
         <Text as='h1'>Transforming Spaces <br/> & Delivering Quality</Text>
         <Text as='h3'>Your Premier Contracting Solution</Text>
