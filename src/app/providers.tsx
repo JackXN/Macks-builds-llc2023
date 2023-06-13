@@ -70,8 +70,6 @@ const breakpoints = [
 
 
 export function Providers(
-
-  
   { 
     children 
   }: { 
@@ -80,7 +78,7 @@ export function Providers(
   return (
     <CacheProvider>
       <ChakraProvider theme={theme}>
-        <Loader/>
+      
         {children}
       </ChakraProvider>
     </CacheProvider>

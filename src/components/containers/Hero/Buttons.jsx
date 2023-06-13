@@ -20,8 +20,9 @@ const styles = {
 
     buttonContainer: {
         mt: ['50px'],
-        alignItems: 'left',
-        display: 'flex',
+        // alignItems: 'center',
+        // display: 'flex',
+        // textAlign: 'center',
         
 
         Button: {

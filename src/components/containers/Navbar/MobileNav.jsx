@@ -25,7 +25,7 @@ const Navbar = () => {
   const [scrollPos, setScrollPos] = useState(0);
   const [bgColor, setBgColor] = useState('/HeroBgTwo.png');
 //   const [logoColor, setLogoColor] = useState("./assets/images/Logo.png");
-const [bgStyle, setBgStyle] = useState({ backgroundColor: 'orange' });  
+const [bgStyle, setBgStyle] = useState({ backgroundColor: null });  
 let Link = Scroll.Link;
 
   //! OnScroll Function

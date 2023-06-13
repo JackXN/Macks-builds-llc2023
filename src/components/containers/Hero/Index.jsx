@@ -15,6 +15,7 @@ const Index = () => {
   <Box
   height='100vh'
   display={["flex", "flex", "flex", "none", "none"]}
+  // display='none'
   backgroundImage='./HeroBgTwo.png'
   backgroundPosition='center'
   backgroundSize='cover'

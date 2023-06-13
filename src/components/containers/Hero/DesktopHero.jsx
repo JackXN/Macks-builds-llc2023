@@ -12,7 +12,7 @@ const DesktopHero = () => {
     <DesktopNav/>
     <Box display={['none', 'none', 'none', 'flex']} flexDirection='column'  position='relative'>
         {/* <Text as='h2' color='white'>Give Us A Call</Text> */}
-<Box display='flex' justifyContent='center' alignItems='center' fontSize='19px' bg='#D9C05A' >
+<Box display='flex' justifyContent='center' alignItems='center' fontSize='19px' bg='#D9C05A' boxShadow='xl-dark'>
     <Phone color='white'/>
     <Text as='p' ml='10px' color='white' fontSize='18px' fontWeight='bold'>801-441-9433</Text>
     </Box>
