@@ -23,9 +23,10 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = useState(null);
   const [scrollPos, setScrollPos] = useState(0);
-  const [bgColor, setBgColor] = useState('orange');
+  const [bgColor, setBgColor] = useState('/HeroBgTwo.png');
 //   const [logoColor, setLogoColor] = useState("./assets/images/Logo.png");
-  let Link = Scroll.Link;
+const [bgStyle, setBgStyle] = useState({ backgroundColor: 'orange' });  
+let Link = Scroll.Link;
 
   //! OnScroll Function
 
@@ -48,22 +49,25 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (scrollPos > 0) {
-      setBgColor("#E04C4C");
-    } else {
-      setBgColor(null);
-    }
+    const bgColor = scrollPos > 0 ? "rgba(0,0,0,0.5)" : "transparent";
+    const bgStyle = bgColor === "transparent" ? { backgroundImage: 'url("/HeroBgTwo.png")' } : { backgroundColor: bgColor };
+    setBgStyle(bgStyle);
   }, [scrollPos]);
 
   return (
-    <Flex
+    
+    <Box
       as="nav"
       alignItems="center"
       justifyContent="center"
-      wrap="wrap"
-      // bg='242632'
+      backgroundSize='cover'
+      backgroundPosition='center'
+      backgroundRepeat='no-repeat'
+      backgroundAttachment='fixed'
+    {...bgStyle}
+      // wrap="wrap"
+      // bg='#242632'
       // padding="1.5rem"
-
       // bg={bgColor}
       padding="20px"
     //   borderRadius="20px"
@@ -156,6 +160,7 @@ const Navbar = () => {
               offset={50}
               duration={500}
               cursor="pointer"
+              sx={styles.linkTag}
               
             >
               About Us
@@ -167,6 +172,7 @@ const Navbar = () => {
               smooth={true}
               offset={50}
               duration={500}
+              sx={styles.linkTag}
            
             >
               Services
@@ -179,45 +185,48 @@ const Navbar = () => {
               offset={50}
               duration={500}
               cursor="pointer"
+              sx={styles.linkTag}
             >
               Contact Us
             </Link>
 
             <Link
               activeClass="active"
-              to="pricing"
+              to="projects"
               spy={true}
               smooth={true}
               offset={50}
               duration={500}
               cursor="pointer"
+              sx={styles.linkTag}
             >
-              Submissions
+              Featured Projects
             </Link>
             <Link
               activeClass="active"
-              to="pricing"
+              to="FAQ"
               spy={true}
               smooth={true}
               offset={50}
               duration={500}
               cursor="pointer"
               _hover={{ transform: 'translateY(-8px)', boxShadow: 'xl black', cursor: 'pointer' }}
+              sx={styles.linkTag}
             >
-              Gallery
+              FAQ
             </Link>
-            <h1>Hello</h1>
+      
           </DrawerBody>
 
         </DrawerContent>
-        <h1>Hello</h1>
+
       </Drawer>
 
       <Flex align="center">
        
       </Flex>
    
-    </Flex>
+    </Box>
 
   );
 };

@@ -2,9 +2,13 @@
 'use client'
 
 import 'flowbite';
+import {useState,useEffect} from 'react';
 
 // Tailwind
 // import 'tailwindcss/tailwind.css';
+
+// Loader
+import Loader from '../components/Loader';
 
 // Chakra
 import { CacheProvider } from '@chakra-ui/next-js';
@@ -65,7 +69,10 @@ const breakpoints = [
 
 
 
-export function Providers({ 
+export function Providers(
+
+  
+  { 
     children 
   }: { 
   children: React.ReactNode 
@@ -73,6 +80,7 @@ export function Providers({
   return (
     <CacheProvider>
       <ChakraProvider theme={theme}>
+        <Loader/>
         {children}
       </ChakraProvider>
     </CacheProvider>

@@ -56,6 +56,8 @@ flexDirection: 'row',
 counterBox: {
   display: 'flex',
   flexDirection: 'column',
+  margin: '30px',
+  textAlign:'center',
 
 },
 count: {

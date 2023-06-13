@@ -1,14 +1,16 @@
 import React from "react";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image,Text } from "@chakra-ui/react";
+import {BsFillTelephoneFill as Phone} from 'react-icons/bs';
 
 const OverlappingImages = () => {
   return (
-    <Box position="relative" width="300px" top={['190px']} right={['190px']} >
+    <Box position="relative" width="300px"  right={['190px']} display='flex' flexDirection='column' >
 
 
-        <Box height='300px' width='700px' backgroundImage='DesktopImageTwo.png' backgroundSize='cover' >
-
+        <Box height='90vh' width={['440px']} backgroundPosition='center'backgroundImage='DesktopImageTwo.png' backgroundSize='cover' borderRadius='md' boxShadow='dark-lg'>
+       
         </Box>
+  
       {/* <Image
         src="/DesktopImageOne.png"
         alt="First Image"
@@ -21,7 +23,7 @@ const OverlappingImages = () => {
       <Image
         src="/DesktopImageOne.png"
         alt="Second Image"
-        width='900px'
+        width='auto'
         height="auto"
         sx={styles.images}
         zIndex={2}
@@ -29,6 +31,7 @@ const OverlappingImages = () => {
         right={['120px']}
      
       />
+     
     </Box>
   );
 };

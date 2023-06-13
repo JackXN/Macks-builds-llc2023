@@ -17,7 +17,7 @@ const styles = {
             
         },
         p: {
-            display: ['none']
+            display: ['none','none','none','none', 'flex']
         }
     },
 

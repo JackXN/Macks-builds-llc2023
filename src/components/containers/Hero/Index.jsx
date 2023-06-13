@@ -5,21 +5,21 @@ import {Box, Text,Container, Button, Flex} from '@chakra-ui/react';
 import Counter from './Counter';
 // import 'boxicons';
 import MobileNav from '../Navbar/MobileNav';
-
+import Buttons from './Buttons';
 
 
 
 const Index = () => {
   return (
+    <>
   <Box
   height='100vh'
-
+  display={["flex", "flex", "flex", "none", "none"]}
   backgroundImage='./HeroBgTwo.png'
   backgroundPosition='center'
   backgroundSize='cover'
   backgroundRepeat='no-repeat'
   backgroundAttachment='fixed'
-  display='flex'
   flexDirection='column'
   justifyContent='center'
   alignItems='center'
@@ -34,26 +34,15 @@ const Index = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolor non, dolorum sed corrupti deserunt eveniet rem? Voluptatum officia impedit, libero sed repudiandae error necessitatibus soluta ea ducimus quae delectus?
             </Text>
         </Box>
-        <Box sx={styles.buttonContainer}>
-            <Button
-            bg='#D9C05B'
-            color='white'
-            >Our Services</Button>
-            <Button
-            color='#D9C05B'
-            bg='none'            
-            >Our Projects
-            </Button>
-        </Box>
-
-
-        <Box>
+        <Buttons/>
+        <Box position='relative' display='flex' bottom= '80px'>
             <Counter/>
         </Box>
     </Box>
     
 
   </Box>
+  </>
   )
 }
 
