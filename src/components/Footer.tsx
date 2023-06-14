@@ -17,7 +17,7 @@ const Footer = () => {
         px={{ base: "1rem", lg: "0" }}
         flexWrap={{ base: "wrap", lg: "nowrap" }}
       >
-           <Image src="/Logo.png" alt="Airbnb Logo" maxH="10rem" mb="1rem" maxW='10rem'/>
+           {/* <Image src="/Logo.png" alt="Airbnb Logo" maxH="10rem" mb="1rem" maxW='10rem'/> */}
         <Box flexBasis={{ base: "100%", lg: "25%" }} mb={{ base: "1.5rem", lg: "0" }}>
           <Heading
             as="h5"
@@ -117,7 +117,7 @@ const Footer = () => {
         color="gray.500"
         fontSize="0.75rem"
       >
-        &copy; {new Date().getFullYear()} Airbnb. All rights reserved.
+        &copy; {new Date().getFullYear()} Macks Builds LLC. All rights reserved.
       </Text>
     </Box>
   );

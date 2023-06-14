@@ -21,7 +21,7 @@ export default function Home() {
     // Simulate a delay of 2000 milliseconds
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
