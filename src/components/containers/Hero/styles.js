@@ -1,7 +1,7 @@
 const styles = {
     textContainer: {
         position: 'relative',
-        bottom: ['50px'],
+        // bottom: ['50px'],
         textAlign: 'center',
         h1: {
             color: 'white',

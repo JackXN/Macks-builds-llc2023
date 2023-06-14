@@ -23,7 +23,7 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = useState(null);
   const [scrollPos, setScrollPos] = useState(0);
-  const [bgColor, setBgColor] = useState('/HeroBgTwo.png');
+  // const [bgColor, setBgColor] = useState('orange');
 //   const [logoColor, setLogoColor] = useState("./assets/images/Logo.png");
 const [bgStyle, setBgStyle] = useState({ backgroundColor: null });  
 let Link = Scroll.Link;
@@ -50,7 +50,7 @@ let Link = Scroll.Link;
 
   useEffect(() => {
     const bgColor = scrollPos > 0 ? "rgba(0,0,0,0.5)" : "transparent";
-    const bgStyle = bgColor === "transparent" ? { backgroundImage: 'url("/HeroBgTwo.png")' } : { backgroundColor: bgColor };
+    const bgStyle = bgColor === "transparent" ? { backgroundImage: 'orange' } : { backgroundColor: bgColor };
     setBgStyle(bgStyle);
   }, [scrollPos]);
 
@@ -64,7 +64,7 @@ let Link = Scroll.Link;
       backgroundPosition='center'
       backgroundRepeat='no-repeat'
       backgroundAttachment='fixed'
-    {...bgStyle}
+    // {...bgStyle}
       // wrap="wrap"
       // bg='#242632'
       // padding="1.5rem"

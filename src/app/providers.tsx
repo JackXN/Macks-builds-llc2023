@@ -38,6 +38,10 @@ const breakpoints = [
     
     styles: {
       global: {
+
+        html: {
+          backgroundColor: 'red',
+        },
         "h1": {
           fontSize: ['35px'],
           fontFamily: 'Lato',

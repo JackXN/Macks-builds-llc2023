@@ -23,7 +23,7 @@ const Homepage = () => {
         backgroundRepeat="no-repeat"
         overlfowX='hidden'
       >
-        <MobileNav/>
+        {/* <MobileNav/> */}
        {/* <DesktopNav/> */}
 
           <DesktopHero/>
