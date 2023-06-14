@@ -34,7 +34,7 @@ return (
 <>
     <HomePage/>
     <Box alignContent='center' justifyContent='center' bg='red' flexDirection='column'>
-    <Footer/>
+    {/* <Footer/> */}
     </Box>
 </>
   }

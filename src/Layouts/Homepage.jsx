@@ -10,6 +10,7 @@ import FAQ from '../components/FAQ';
 import Hero from '../components/containers/Hero/Index';
 import DesktopHero from '../components/containers/Hero/DesktopHero';
 import DesktopNav from '@/components/containers/Navbar/DesktopNav';
+import Footer from '../components/Footer';
 
 const Homepage = () => {
   const isMobile = useBreakpointValue({ base: true, lg: true });
@@ -48,7 +49,9 @@ const Homepage = () => {
        
           </Box>
         </Box>
+        <Footer/>
       </Box>
+
     </>
   );
 };
