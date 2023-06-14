@@ -15,10 +15,10 @@ const images = [
     imageName: 'Makita Logo',
     image: '/logoThree.png'
   },
-  {
-    imageName: 'Milwakee Logo',
-    image: '/LogoFour.png'
-  }
+  // {
+  //   imageName: 'Milwakee Logo',
+  //   image: '/LogoFour.png'
+  // }
 ];
 
 const Sponsor = () => {
