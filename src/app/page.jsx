@@ -8,6 +8,7 @@ import HomePage from '../Layouts/Homepage';
 import Footer from '../components/Footer'
 import Loader from '../components/Loader';
 
+import Head from 'next/head';
 
 
 
@@ -30,6 +31,9 @@ export default function Home() {
 
 return (
   <>
+  <Head>
+    <title>Macks Builds LLC</title>
+  </Head>
     <HomePage/>
   
       

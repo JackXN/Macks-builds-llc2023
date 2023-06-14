@@ -1,7 +1,6 @@
 // app/providers.tsx
 "use client";
 
-
 //aos config
 import initializeAOS from '../../aos';
 
@@ -34,6 +33,10 @@ const breakpoints = [
   "1366px",
   "1620px"
 ];
+
+
+
+
 
 const theme = extendTheme({
   breakpoints,
