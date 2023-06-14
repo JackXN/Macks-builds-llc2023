@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import { Box, Text, useBreakpointValue } from '@chakra-ui/react';
 import MobileNav from '../components/containers/Navbar/MobileNav';
 import ServicesHome from '../components/containers/Services/ServicesHome';
