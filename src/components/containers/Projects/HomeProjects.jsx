@@ -16,9 +16,9 @@ const images = [
 const SwiperComponent = () => {
   return (
     <>
-    <Box mb={['50px']}>
+    <Box mb={['50px']} id='projects'>
    <Text as='h3'>Our Work</Text>
-   <Text as='h1' color='white'>Featured Projects</Text>
+   <Text as='h1' color='white' data-aos='fade-left'>Featured Projects</Text>
    </Box>
     <Swiper
       slidesPerView={1}

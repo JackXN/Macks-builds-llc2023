@@ -26,8 +26,8 @@ const Homepage = () => {
         {/* <MobileNav/> */}
        {/* <DesktopNav/> */}
 
-          <DesktopHero/>
-          <Hero/>
+          <DesktopHero id='home'/>
+          <Hero id='home'/>
       
 
         <ServicesHome />
@@ -37,7 +37,7 @@ const Homepage = () => {
 
           <Box mt="50px">
             <Text as="h3">Testimonials</Text>
-            <Text as="h1" color="white">
+            <Text as="h1" color="white" data-aos='fade-left'>
               See What Our Customers <br /> Are Saying About Us
             </Text>
             <Testimonial />
@@ -45,6 +45,7 @@ const Homepage = () => {
 
           <Box bg="white" pt="50px">
             <FAQ />
+       
           </Box>
         </Box>
       </Box>

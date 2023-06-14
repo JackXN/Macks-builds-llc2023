@@ -76,25 +76,25 @@ const [shadow, setShadow] = useState('md')
         <Flex sx={styles.rightContainer}>
           <List display="flex">
             <ListItem mr="20px" padding="10px 8px">
-              <Link style={{cursor: 'pointer'}} to="test1" spy={true} smooth={true} offset={50} duration={500}>Home</Link>
+              <Link style={{cursor: 'pointer'}} to="home" spy={true} smooth={true} offset={50} duration={500}>Home</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
             <Link style={{cursor: 'pointer'}} to="about" spy={true} smooth={true} offset={50} duration={500}>About</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              Services
+            <Link style={{cursor: 'pointer'}} to="services" spy={true} smooth={true} offset={50} duration={500}>Services</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              Contact
+            <Link style={{cursor: 'pointer'}} to="contact" spy={true} smooth={true} offset={50} duration={500}>Contact</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              Gallery
+            <Link style={{cursor: 'pointer'}} to="projects" spy={true} smooth={true} offset={50} duration={500}>Featured Projects</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              FAQ
+            <Link style={{cursor: 'pointer'}} to="faq" spy={true} smooth={true} offset={50} duration={500}>FAQ</Link>
             </ListItem>
             <ListItem>
-           <Button padding='20px 20px'>Get A Quote Today!</Button>
+           <Button padding='20px 20px' href='quote'>Get A Quote Today!</Button>
             </ListItem>
           </List>
         </Flex>

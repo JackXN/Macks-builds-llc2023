@@ -12,17 +12,18 @@ const ServicesHome = () => {
       justifyContent='center'
       alignItems='center'
       flexDirection='column'
+      id='services'
     >
       <Box sx={styles.title}>
         <Text as='h3'>Our Advantage</Text>
-        <Text as='h1'>Providing The Best Service <br/> For All Home Projects</Text>
+        <Text as='h1' data-aos='fade-left'>We Provide The Best Service <br/> For All Home Projects</Text>
       </Box>
 
       <Box sx={styles.serviceContainer}>
         {data.map((item, index) => (
-          <Box key={index} sx={styles.serviceBox} className={`animate__animated animate__${item.animation}`}>
+          <Box key={index} sx={styles.serviceBox} className={`animate__animated animate__${item.animation}`} data-aos='fade-down'>
             <Box fontSize='30px' sx={styles.iconContainer}>
-              <i style={{ color: 'orange' }}>{item.icon}</i>
+              <i style={{ color: item.color }}>{item.icon}</i>
             </Box>
             <Box sx={styles.serviceInfo}>
               <Text as='h2'>{item.title}</Text>
@@ -49,11 +50,11 @@ const styles = {
     },
   },
   serviceContainer: {
-    mt: ['100px'],
+    mt: ['50px'],
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center', // Added to horizontally center the boxes
-    alignItems: 'stretch', // Added to make boxes have equal height
+    alignItems: 'center', // Added to make boxes have equal height
   },
   serviceBox: {
     display: 'flex',

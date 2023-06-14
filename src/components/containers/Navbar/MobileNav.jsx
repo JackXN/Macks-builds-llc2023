@@ -163,7 +163,7 @@ let Link = Scroll.Link;
               sx={styles.linkTag}
               
             >
-              About Us
+      About Us
             </Link>
             <Link
               activeClass="active"

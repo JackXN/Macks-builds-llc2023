@@ -13,8 +13,10 @@ const Loader = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  return isLoading ? <Box height='100vh' bg='orange'>
-    <h1>WELCOME</h1>
+  return isLoading ? <Box height='100vh' backgroundImage='/Loader.png'
+  backgroundPosition='center' backgroundSize='cover'
+  >
+ 
 
 
   </Box> : null;

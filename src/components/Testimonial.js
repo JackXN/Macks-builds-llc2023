@@ -5,17 +5,17 @@ const Testimonial = ({ image, name, role, content }) => {
   const gridColumns = useBreakpointValue({ base: 1, md: 2 });
 
   return (
-    <Box p={3} maxW="sm" bg='white' borderRadius='md' margin='10px' boxShadow='lg' transition="transform 0.3s ease-in-out"
+    <Box p={3} maxW="sm" bg='#19273E' borderRadius='md' margin='10px' boxShadow='xl' transition="transform 0.3s ease-in-out" 
     _hover={{ transform: 'translateY(-8px)', boxShadow: 'xl black', cursor: 'pointer' }}>
-      <Flex direction="column" alignItems="center">
+      <Flex direction="column" alignItems="center" >
         <Avatar size="xl" name={name} src={image}  />
-        <Text fontWeight="bold" fontSize="md" >
+        <Text fontWeight="bold" fontSize="md"  color='white'>
           {name}
         </Text>
-        <Text color="gray.600" fontSize="sm" >
+        {/* <Text color="gray.600" fontSize="sm" >
           {role}
-        </Text>
-        <Text>{content}</Text>
+        </Text> */}
+        <Text as='p' color='white'>{content}</Text>
       </Flex>
     </Box>
   );
@@ -47,7 +47,7 @@ const TestimonialSlider = () => {
   const gridColumns = useBreakpointValue({ base: 1, md: 2, lg: 3 });
 
   return (
-    <Container maxW="container.xl" padding='50px'>
+    <Container maxW="container.xl" padding='50px' data-aos='fade-up' data-aos-duration='2000' >
       <Flex columns={gridColumns}  flexWrap='wrap' spacing={10} mt={8} justifyContent='center' >
         {testimonials.map((testimonial, index) => (
           <Testimonial key={index} {...testimonial} />
