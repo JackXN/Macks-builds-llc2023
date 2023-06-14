@@ -17,7 +17,7 @@ const DesktopHero = () => {
        
 <Box sx={styles.hero} id='home'>
     <Box sx={styles.heroText}>
-<Text as='h1'>Transforming Spaces <br/> & Delivering Quality</Text>
+<Text as='h1' fontSize='50px'>Transforming Spaces <br/> & Delivering Quality</Text>
         <Text as='h3'>Your Premier Contracting Solution</Text>
     
             <Text as='p' color='white'>
