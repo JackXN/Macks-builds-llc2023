@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {Box,Text} from '@chakra-ui/react';
+import {Box,Text,Spinner} from '@chakra-ui/react';
 
 
 const Loader = () => {
@@ -13,10 +13,19 @@ const Loader = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  return isLoading ? <Box height='100vh' backgroundImage='/Loader.png'
-  backgroundPosition='center' backgroundSize='cover'
+  return isLoading ? <Box height='100vh' 
+  backgroundPosition='center' backgroundSize='cover' backgroundImage='/Loader.png'
   >
- 
+<Box
+      width="100vw"
+      height="50vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    
+    >
+      <Spinner size="xl" color="orange" position='relative' top='425px' />
+    </Box>
 
 
   </Box> : null;

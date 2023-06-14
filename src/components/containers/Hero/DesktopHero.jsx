@@ -15,7 +15,7 @@ const DesktopHero = () => {
     </Box>
     <Flex       background={`linear-gradient(to bottom, ${gradientColors[0]}, ${gradientColors[1]})`} position='relative'    height='100vh' display={["none", "none", "none", "flex", "flex"]}>
        
-<Box sx={styles.hero} >
+<Box sx={styles.hero} id='home'>
     <Box sx={styles.heroText}>
 <Text as='h1'>Transforming Spaces <br/> & Delivering Quality</Text>
         <Text as='h3'>Your Premier Contracting Solution</Text>
