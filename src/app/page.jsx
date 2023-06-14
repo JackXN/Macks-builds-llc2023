@@ -31,10 +31,7 @@ export default function Home() {
 return (
   <>
   {isLoading ? <Loader/> :
-<>
     <HomePage/>
-  
-</>
   }
       
       </>

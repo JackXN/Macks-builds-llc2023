@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Box, Text, useBreakpointValue } from '@chakra-ui/react';
 import MobileNav from '../components/containers/Navbar/MobileNav';
 import ServicesHome from '../components/containers/Services/ServicesHome';
@@ -11,12 +11,34 @@ import Hero from '../components/containers/Hero/Index';
 import DesktopHero from '../components/containers/Hero/DesktopHero';
 import DesktopNav from '@/components/containers/Navbar/DesktopNav';
 import Footer from '../components/Footer';
+import Loader from '../components/Loader';
+
+
+
 
 const Homepage = () => {
+
+const [isLoading, setIsLoading] = useState(true);
+
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsLoading(false);
+
+  }, 3500)
+  return () => clearTimeout(timer)
+},[])
+
+
+
+
+
   const isMobile = useBreakpointValue({ base: true, lg: true });
 
   return (
     <>
+    {isLoading ? <Loader/> :
+    
       <Box
       // overflowx='hidden'
         backgroundPosition="center"
@@ -51,7 +73,7 @@ const Homepage = () => {
         </Box>
         <Footer/>
       </Box>
-
+    }
     </>
   );
 };
