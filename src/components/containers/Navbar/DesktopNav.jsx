@@ -1,64 +1,104 @@
-// "use client";
+"use client"; 
+import React, {useEffect,useState} from 'react';
 import styles from "./DesktopStyles";
+// import Link from 'next/link'
 import {
   Box,
   Text,
-  Link,
   Image,
   UnorderedList,
   Flex,
   ListItem,
   List,
-  Spacer
+  Spacer, Button
 } from "@chakra-ui/react";
+import * as Scroll from 'react-scroll';
+
 import NavLinks from '../../../constants/index';
 
 
 
-
 const DesktopNav = () => {
-    
+  let Link      = Scroll.Link;
+  const [bgColor, setBgColor] = useState('orange');
+  const [scrollPos, setScrollPos] = useState(0);
+const [shadow, setShadow] = useState('md')
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== "undefined") {
+        setScrollPos(window.pageYOffset);
+      }
+    };
+  
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
+  
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+  
+  useEffect(() => {
+    if (scrollPos > 200) {
+      setBgColor("rgba(0,0,0,0.5)");
+      setShadow('none')
+    } else {
+      setBgColor('#242632');
+    }
+  }, [scrollPos]);
+  
+
+
+
+
 
     return (
-      <Flex sx={styles.container}>
+      <Box sx={styles.container} 
+      as="nav"
+      position="sticky"
+      top={0}
+      zIndex={10}
+      bg={bgColor}
+      boxShadow={shadow}
+      >
         <Flex sx={styles.leftContainer}>
           <Image
           src='./Logo.png'
             alt="Site Smiths Logo"
-            height={["50%", "50%", "50%", "50%"]}
+            height={["50%", "50%", "50%", "100%"]}
           />
         </Flex>
-  
         <Spacer />
   
         <Flex sx={styles.rightContainer}>
           <List display="flex">
             <ListItem mr="20px" padding="10px 8px">
-              Home
+              <Link style={{cursor: 'pointer'}} to="home" spy={true} smooth={true} offset={50} duration={500}>Home</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              About
+            <Link style={{cursor: 'pointer'}} to="about" spy={true} smooth={true} offset={50} duration={500}>About</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              Services
+            <Link style={{cursor: 'pointer'}} to="services" spy={true} smooth={true} offset={50} duration={500}>Services</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              Contact
+            <Link style={{cursor: 'pointer'}} to="contact" spy={true} smooth={true} offset={50} duration={500}>Contact</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              Gallery
+            <Link style={{cursor: 'pointer'}} to="projects" spy={true} smooth={true} offset={50} duration={500}>Featured Projects</Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-              FAQ
+            <Link style={{cursor: 'pointer'}} to="faq" spy={true} smooth={true} offset={50} duration={500}>FAQ</Link>
             </ListItem>
             <ListItem>
-              <Text bg="#E04C4C" color="#ffff" padding="10px 8px">
-                Get A Quote
-              </Text>
+           <Button padding='20px 20px' href='quote'>Get A Quote Today!</Button>
             </ListItem>
           </List>
         </Flex>
-      </Flex>
+      </Box>
     );
   };
   
