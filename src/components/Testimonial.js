@@ -25,7 +25,7 @@ const TestimonialSlider = () => {
   const testimonials = [
     {
       image: 'testimonial1.jpg',
-      name: 'John Smith',
+      name: 'Johny Coles',
       role: 'Homeowner',
       content: 'Macks Builds LLC did an excellent job renovating our kitchen. The quality of their workmanship and attention to detail exceeded our expectations. We highly recommend them for any home improvement project.',
     },
@@ -37,9 +37,9 @@ const TestimonialSlider = () => {
     },
     {
       image: 'testimonial2.jpg',
-      name: 'Jane Johnson',
-      role: 'Business Owner',
-      content: 'I hired Macks Builds LLC to construct a new commercial building for my business. They demonstrated professionalism, expertise, and excellent communication throughout the entire process. The project was completed on time and within budget. I couldn\'t be happier with the results.',
+      name: 'Kennedy Breckham',
+      role: 'Homeowner',
+      content: 'I had a great experience with Mack  for a home renovation project. He Was  professional, responsive, and delivered exceptional work. The team paid attention to every detail and ensured that my vision was brought to life. The end result exceeded my expectations, and I couldnt be more satisfied. I highly recommend Macks Builds for any construction or remodeling needs.',
     },
     // Add more testimonials here...
   ];
