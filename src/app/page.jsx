@@ -21,7 +21,7 @@ export default function Home() {
     // Simulate a delay of 2000 milliseconds
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -33,9 +33,7 @@ return (
   {isLoading ? <Loader/> :
 <>
     <HomePage/>
-    <Box alignContent='center' justifyContent='center' bg='red' flexDirection='column'>
-    {/* <Footer/> */}
-    </Box>
+  
 </>
   }
       
