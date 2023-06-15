@@ -5,6 +5,7 @@ import DesktopNav from "../Navbar/DesktopNav";
 import Counter from "./Counter";
 import Buttons from "./Buttons";
 import {BsFillTelephoneFill as Phone} from 'react-icons/bs';
+
 const DesktopHero = () => {
     const gradientColors = ["#242733", "#1D1D27"];
   return (
