@@ -7,7 +7,6 @@ import {Text, Box} from '@chakra-ui/react';
 import HomePage from '../Layouts/Homepage';
 import Footer from '../components/Footer'
 import Loader from '../components/Loader';
-
 import Head from 'next/head';
 
 
@@ -22,7 +21,7 @@ export default function Home() {
     // Simulate a delay of 2000 milliseconds
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,11 +30,10 @@ export default function Home() {
 
 return (
   <>
-  <Head>
-    <title>Macks Builds LLC</title>
-  </Head>
+  {isLoading ? <Loader/> :
     <HomePage/>
   
+}
       
       </>
     );

@@ -18,16 +18,16 @@ import Loader from '../components/Loader';
 
 const Homepage = () => {
 
-const [isLoading, setIsLoading] = useState(true);
+// const [isLoading, setIsLoading] = useState(true);
 
 
-useEffect(() => {
-  const timer = setTimeout(() => {
-    setIsLoading(false);
+// useEffect(() => {
+//   const timer = setTimeout(() => {
+//     setIsLoading(false);
 
-  }, 3500)
-  return () => clearTimeout(timer)
-},[])
+//   }, 3500)
+//   return () => clearTimeout(timer)
+// },[])
 
 
 
@@ -37,7 +37,7 @@ useEffect(() => {
 
   return (
     <>
-    {isLoading ? <Loader/> :
+  
     
       <Box
       // overflowx='hidden'
@@ -73,7 +73,7 @@ useEffect(() => {
         </Box>
         <Footer/>
       </Box>
-    }
+    
     </>
   );
 };

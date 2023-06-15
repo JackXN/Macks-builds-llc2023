@@ -31,9 +31,6 @@ const DesktopHero = () => {
             <Box position='relative' display='flex' bottom= '80px'>
                 <Counter/>
             </Box>
-
-          
-
 </Box>
 <Spacer/>
 <Box flex='1'>
