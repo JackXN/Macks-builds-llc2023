@@ -15,7 +15,6 @@ return (
       justifyContent="center"
       alignItems="center"
       padding='10px'
-    
     >
       <Spinner boxSize={15} color="orange" position='relative' top='425px' />
     </Box>

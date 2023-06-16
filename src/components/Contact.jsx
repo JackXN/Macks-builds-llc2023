@@ -60,9 +60,9 @@ const Contact = () => {
               <Stack spacing={3} direction="column" justify="center" alignItems="center" px={3}>
                 <Icon as={option.icon} w={10} h={10} color="yellow.400" />
                 
-                <Text fontSize="md" textAlign="center">
+                {/* <Text fontSize="md" textAlign="center">
                   {option.value}
-                </Text>
+                </Text> */}
               </Stack>
               {contactOptions.length - 1 !== index && (
                 <Flex d={{ base: 'none', md: 'flex' }}>
