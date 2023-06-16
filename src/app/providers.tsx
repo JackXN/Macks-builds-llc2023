@@ -70,6 +70,9 @@ const theme = extendTheme({
         mt: ["25px"],
         mb: ["25px"],
         fontWeight: 'black'
+      },
+      Container:{
+        margin: '10px'
       }
     }
   }

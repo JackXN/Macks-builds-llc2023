@@ -23,7 +23,6 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = useState(null);
   const [scrollPos, setScrollPos] = useState(0);
-  // const [bgColor, setBgColor] = useState('orange');
 //   const [logoColor, setLogoColor] = useState("./assets/images/Logo.png");
 const [bgStyle, setBgStyle] = useState({ backgroundColor: null });  
 let Link = Scroll.Link;
@@ -50,7 +49,7 @@ let Link = Scroll.Link;
 
   useEffect(() => {
     const bgColor = scrollPos > 0 ? "rgba(0,0,0,0.5)" : "transparent";
-    const bgStyle = bgColor === "transparent" ? { backgroundImage: 'orange' } : { backgroundColor: bgColor };
+    const bgStyle = bgColor === "transparent" ? { backgroundImage: null } : { backgroundColor: bgColor };
     setBgStyle(bgStyle);
   }, [scrollPos]);
 

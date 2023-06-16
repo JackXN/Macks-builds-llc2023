@@ -4,7 +4,10 @@ import { Providers } from "./providers";
 
 
 
-
+export const metadata = {
+  title: 'Macks Builds LLC',
+  description: 'Macks Builds LLC Construction company'
+}
 
 
 // Loader

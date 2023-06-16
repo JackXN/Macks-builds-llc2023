@@ -20,7 +20,7 @@ import NavLinks from '../../../constants/index';
 
 const DesktopNav = () => {
   let Link      = Scroll.Link;
-  const [bgColor, setBgColor] = useState('orange');
+  const [bgColor, setBgColor] = useState(null);
   const [scrollPos, setScrollPos] = useState(0);
 const [shadow, setShadow] = useState('md')
   useEffect(() => {
