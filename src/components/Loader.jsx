@@ -9,14 +9,15 @@ return (
   backgroundPosition='center' backgroundSize='cover' backgroundImage='/Loader.png'
   >
 <Box
-      width="100vw"
+      width="90vw"
       height="50vh"
       display="flex"
       justifyContent="center"
       alignItems="center"
+      padding='10px'
     
     >
-      <Spinner boxSize={20} color="orange" position='relative' top='425px' />
+      <Spinner boxSize={15} color="orange" position='relative' top='425px' />
     </Box>
 
 
