@@ -40,7 +40,7 @@ const contactOptions = [
 
 const Contact = () => {
   return (
-    <Container maxW="7xl" padding='50px' mt='150px'>
+    <Container maxW="7xl" padding='50px' mt='150px' id='contact'>
       <Stack spacing={10}>
         <Flex align="center" justify="center" direction="column">
           <Heading fontSize="4xl" mb={2}>
