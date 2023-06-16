@@ -1,4 +1,4 @@
-import { Container, Box, chakra, Text, Icon, SimpleGrid, Image } from '@chakra-ui/react';
+import { Container, Box, chakra, Text, Icon, SimpleGrid, Image, Flex } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { MdOutlinePersonPin, MdPermDeviceInformation, MdOutlineFlashlightOn } from 'react-icons/md';
 import {IoMdTime} from 'react-icons/io';
@@ -58,17 +58,17 @@ const Features = () => {
   return (
     <Container maxW="6xl" p={{ base: 5, md: 10 }} mt='50px'>
 
-      <SimpleGrid columns={{ base: 1, md: 2 }} placeItems="center" spacing={16} mt={12} mb={4} padding='50px'>
+      <Flex direction={['column', 'column', 'row', 'row-reverse']} flexWrap="wrap" mt={12} mb={4} padding='50px'>
         {features.map((feature, index) => (
-          <Box key={index} textAlign="center">
+          <Box key={index} textAlign="center" justifyContent='center' alignItems='center' display='flex'  data-aos='fade-down' flexDirection='column'>
             <Icon as={feature.icon} w={10} h={10} color="yellow.400" />
             <chakra.h2 fontWeight="semibold" fontSize="2xl">
               {feature.heading}
             </chakra.h2>
-            <Text fontSize="md" as='p'>{feature.content}</Text>
+            <Text fontSize="md" as='p' width={[null,null,null,null, '50%']}>{feature.content}</Text>
           </Box>
         ))}
-      </SimpleGrid>
+      </Flex>
     </Container>
   );
 };

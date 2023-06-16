@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import Link from 'next/link'
 import * as Scroll from 'react-scroll';
-
 import NavLinks from '../../../constants/index';
 
 

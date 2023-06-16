@@ -25,8 +25,8 @@ const titlesToDisplay=[1,2];
 
     </Container>
 
-    <Box bg='#242632' width='100%' height={['100vh', '100vh', '65vh']}>
-        <Box display='flex' sx={styles.aboutContainer}>
+    <Box bg='#242632' width='100%' height={['100vh', '100vh', '100vh', '100vh', '75vh']}>
+        <Box display='flex' sx={styles.aboutContainer} data-aos='fade-left'>
         {titlesToDisplay.map((index) => (
             <Box key={index} sx={styles.aboutBox}>
         <Text as='h1' key={index}>{data[index].title}</Text>
@@ -37,12 +37,12 @@ const titlesToDisplay=[1,2];
     </Box>
     <Flex direction={['column', 'column' ,'column', 'row-reverse']}>
 <Box flex='3' display='flex' alignItems='center' justifyContent='center' textAlign='center'>
-        <Text as='h1' fontSize={['35px','35px','35px','70px']} mt='50px' mb='50px'>Why <br/> Choose Us?</Text>
+        <Text as='h1' fontSize={['35px','35px','35px','70px']} mt='50px' mb='50px' data-aos='fade-left'>Why <br/> Choose Us?</Text>
         </Box>
-        <Image src='/wireframeHouse.png'/>
+        <Image src='/wireframeHouse.png' data-aos='fade-right'/>
     </Flex>
     <Features/>
-<Contact/>
+<Contact data-aos='fade-up'/>
 
 <Footer/>
 
