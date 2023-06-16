@@ -35,11 +35,11 @@ const titlesToDisplay=[1,2];
       ))}
         </Box>
     </Box>
-    <Flex direction={['column', 'column' ,'column', 'row-reverse']}>
+    <Flex direction={['column', 'column' ,'column',]} justifyContent='center' alignItems='center'>
 <Box flex='3' display='flex' alignItems='center' justifyContent='center' textAlign='center'>
         <Text as='h1' fontSize={['35px','35px','35px','70px']} mt='50px' mb='50px' data-aos='fade-left'>Why <br/> Choose Us?</Text>
         </Box>
-        <Image src='/wireframeHouse.png' data-aos='fade-right'/>
+        <Image src='/wireframeHouse.png' data-aos='fade-right' height='50%' width='50%' alt='wireframe photo' />
     </Flex>
     <Features/>
 <Contact data-aos='fade-up'/>
@@ -53,7 +53,7 @@ const titlesToDisplay=[1,2];
 
 const styles = {
     container: {
-        mt: '150px'
+     
     },
     hero: {
         display: 'flex',

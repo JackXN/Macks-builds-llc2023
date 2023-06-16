@@ -49,7 +49,7 @@ let Link = Scroll.Link;
 
   useEffect(() => {
     const bgColor = scrollPos > 0 ? "rgba(0,0,0,0.5)" : "transparent";
-    const bgStyle = bgColor === "transparent" ? { backgroundImage: null } : { backgroundColor: bgColor };
+    const bgStyle = bgColor === "transparent" ? { backgroundColor: '#242632' } : { backgroundColor: bgColor };
     setBgStyle(bgStyle);
   }, [scrollPos]);
 
@@ -63,7 +63,7 @@ let Link = Scroll.Link;
       backgroundPosition='center'
       backgroundRepeat='no-repeat'
       backgroundAttachment='fixed'
-
+    {...bgStyle}
       padding="20px"
   
       color="white"

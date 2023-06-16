@@ -27,7 +27,6 @@ const Homepage = () => {
       >
         <DesktopHero id="home" />
         <Hero id="home" />
-
         <ServicesHome />
         <AboutHome />
         <Box
@@ -37,7 +36,6 @@ const Homepage = () => {
           pt="50px"
         >
           <HomeProjects />
-
           <Box mt="50px">
             <Text as="h3">Testimonials</Text>
             <Text as="h1" color="white" data-aos="fade-left">
