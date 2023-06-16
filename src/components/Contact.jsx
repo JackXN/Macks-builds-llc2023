@@ -40,7 +40,7 @@ const contactOptions = [
 
 const Contact = () => {
   return (
-    <Container maxW="7xl" py={110}  px={{ base: 5, md: 10 }} mt='150px'>
+    <Container maxW="7xl" padding='50px' mt='150px'>
       <Stack spacing={10}>
         <Flex align="center" justify="center" direction="column">
           <Heading fontSize="4xl" mb={2}>
@@ -75,6 +75,7 @@ const Contact = () => {
         <VStack
           as="form"
           spacing={8}
+          padding='50px'
           w="100%"
           bg={useColorModeValue('white', 'gray.700')}
           rounded="lg"

@@ -14,7 +14,7 @@ const DesktopHero = () => {
     <Box display={['none', 'none', 'none', 'flex']} flexDirection='column'  position='relative' >
         {/* <Text as='h2' color='white'>Give Us A Call</Text> */}
     </Box>
-    <Flex       background={`linear-gradient(to bottom, ${gradientColors[0]}, ${gradientColors[1]})`} position='relative'    height='100vh' display={["none", "none", "none", "flex", "flex"]}>
+    <Flex       background={`linear-gradient(to bottom, ${gradientColors[0]}, ${gradientColors[1]})`} position='relative'    height='120vh' display={["none", "none", "none", "flex", "flex"]}>
        
 <Box sx={styles.hero} id='home'>
     <Box sx={styles.heroText}>
@@ -50,7 +50,7 @@ const styles ={
        padding: '30px',
     //    left: ['150px'],
        top: ['100px'],
-       height:'100%',
+       height:'120vh',
        flex: 2,
     
         alignItems: 'center',

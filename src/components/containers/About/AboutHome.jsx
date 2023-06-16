@@ -20,7 +20,6 @@ const AboutHome = () => {
     <Box sx={styles.buttonContainer}> 
     <Button>Read More</Button>
     </Box>
-
     <Box>
         <Sponsor/>
     </Box>

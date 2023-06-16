@@ -63,15 +63,11 @@ let Link = Scroll.Link;
       backgroundPosition='center'
       backgroundRepeat='no-repeat'
       backgroundAttachment='fixed'
-    // {...bgStyle}
-      // wrap="wrap"
-      // bg='#242632'
-      // padding="1.5rem"
-      // bg={bgColor}
+
       padding="20px"
-    //   borderRadius="20px"
+  
       color="white"
-      // position="absolute"
+      
       position="sticky"
       transition="background-color 0.5s ease-out"
       top={0}
@@ -103,7 +99,7 @@ let Link = Scroll.Link;
         position="relative"
         
       >
-        {/* <Text as='h1' fontFamily='Bangers' color='black'>ITE <br/> SMITHS</Text> */}
+        
         <Image
             src='./Logo.png'
             transition="src 0.5s ease-in"
@@ -148,6 +144,7 @@ let Link = Scroll.Link;
               duration={500}
               cursor="pointer"
               sx={styles.linkTag}
+              href='/'
             >
           Home
             </Link>
