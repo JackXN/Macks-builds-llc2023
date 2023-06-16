@@ -16,7 +16,7 @@ return (
       alignItems="center"
     
     >
-      <Spinner size="2xl" color="orange" position='relative' top='425px' />
+      <Spinner boxSize={20} color="orange" position='relative' top='425px' />
     </Box>
 
 

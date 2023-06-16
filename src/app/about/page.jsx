@@ -6,6 +6,9 @@ import Contact from '../../components/Contact';
 import data from './data';
 import Features from './Features';
 import Footer from '../../components/Footer';
+
+import Head from 'next/head';
+
 const page = () => {
 
 
@@ -13,6 +16,9 @@ const titlesToDisplay=[1,2];
 
   return (
     <>
+    <Head>
+        <title>About Us - Macks Builds LLC.</title>
+    </Head>
     <Nav/>
     <Container sx={styles.container}>
         <Box sx={styles.hero}>

@@ -20,14 +20,11 @@ const DesktopHero = () => {
     <Box sx={styles.heroText}>
 <Text as='h1' fontSize='50px'>Transforming Spaces <br/> & Delivering Quality</Text>
         <Text as='h3'>Your Premier Contracting Solution</Text>
-    
             <Text as='p' color='white'>
-            we are dedicated to delivering quality solutions that bring your spaces to life. Whether youre looking to renovate your home, revamp your office, or create a stunning outdoor area, we have the expertise and passion to make it happen. Explore our range of services and let us help you transform your space into something extraordinary. Get ready to experience the power of quality craftsmanship and design excellence.
+            We are dedicated to delivering quality solutions that bring your spaces to life. Whether youre looking to renovate your home, revamp your office, or create a stunning outdoor area, we have the expertise and passion to make it happen. Explore our range of services and let us help you transform your space into something extraordinary. Get ready to experience the power of quality craftsmanship and design excellence.
             </Text>
             </Box>
-            <Box bottom='20px' position='relative' right={['100px', '100px', '190px']}>
             <Buttons/>
-            </Box>
             <Box position='relative' display='flex' bottom= '80px'>
                 <Counter/>
             </Box>

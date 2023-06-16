@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text, Container, Spacer } from '@chakra-ui/react';
 import data from './data';
-import { ScrollAnimationWrapper } from 'react-scroll-animation';
+
 
 const ServicesHome = ({props}) => {
   return (

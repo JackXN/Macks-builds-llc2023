@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect } from "react";
 import {
   Box,
@@ -16,16 +15,17 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = useState(null);
   const [scrollPos, setScrollPos] = useState(0);
-//   const [logoColor, setLogoColor] = useState("./assets/images/Logo.png");
-const [bgStyle, setBgStyle] = useState({ backgroundColor: null });  
-let Link = Scroll.Link;
+  const [bgStyle, setBgStyle] = useState({ backgroundColor: null });
+  let LinkScroll = Scroll.Link;
+  const router = useRouter();
 
   //! OnScroll Function
 
@@ -53,8 +53,11 @@ let Link = Scroll.Link;
     setBgStyle(bgStyle);
   }, [scrollPos]);
 
+  const handleLogoClick = () => {
+    router.push('/');
+  };
+
   return (
-    
     <Box
       as="nav"
       alignItems="center"
@@ -63,11 +66,9 @@ let Link = Scroll.Link;
       backgroundPosition='center'
       backgroundRepeat='no-repeat'
       backgroundAttachment='fixed'
-    {...bgStyle}
+      {...bgStyle}
       padding="20px"
-  
       color="white"
-      
       position="sticky"
       transition="background-color 0.5s ease-out"
       top={0}
@@ -76,7 +77,7 @@ let Link = Scroll.Link;
       zIndex={4}
       display={["flex", "flex", "flex", "flex", "none"]}
     >
-      <Box display={{ sm: "block", lg: " none" }} onClick={onOpen}>
+      <Box display={{ sm: "block", lg: "none" }} onClick={onOpen}>
         <IconButton
           icon={<HamburgerIcon />}
           aria-label="Toggle navigation"
@@ -97,20 +98,22 @@ let Link = Scroll.Link;
         justifyContent="center"
         alignItems="center"
         position="relative"
-        
       >
-        
-        <Image
-            src='./Logo.png'
-            transition="src 0.5s ease-in"
-            alt="Something"
-            height="70%"
-            width="70%"
-            alignSelf="center"
-            position="relative"
-            right={["25px"]}
-            marginLeft='30px'
-          />
+        <Link href="/">
+          <a onClick={handleLogoClick}>
+            <Image
+              src="./Logo.png"
+              transition="src 0.5s ease-in"
+              alt="Something"
+              height="70%"
+              width="70%"
+              alignSelf="center"
+              position="relative"
+              right={["25px"]}
+              marginLeft='30px'
+            />
+          </a>
+        </Link>
       </Box>
 
       {/* DRAWER */}
@@ -135,7 +138,7 @@ let Link = Scroll.Link;
             borderRadius="20px"
             fontFamily="Lato"
           >
-            <Link
+            <LinkScroll
               activeClass="active"
               to="home"
               spy={true}
@@ -146,9 +149,9 @@ let Link = Scroll.Link;
               sx={styles.linkTag}
               href='/'
             >
-          Home
-            </Link>
-            <Link
+              Home
+            </LinkScroll>
+            <LinkScroll
               activeClass="active"
               to="about"
               spy={true}
@@ -157,11 +160,10 @@ let Link = Scroll.Link;
               duration={500}
               cursor="pointer"
               sx={styles.linkTag}
-              
             >
-      About Us
-            </Link>
-            <Link
+              About Us
+            </LinkScroll>
+            <LinkScroll
               activeClass="active"
               to="services"
               spy={true}
@@ -169,11 +171,10 @@ let Link = Scroll.Link;
               offset={50}
               duration={500}
               sx={styles.linkTag}
-           
             >
               Services
-            </Link>
-            <Link
+            </LinkScroll>
+            <LinkScroll
               activeClass="active"
               to="contact"
               spy={true}
@@ -184,9 +185,9 @@ let Link = Scroll.Link;
               sx={styles.linkTag}
             >
               Contact Us
-            </Link>
+            </LinkScroll>
 
-            <Link
+            <LinkScroll
               activeClass="active"
               to="projects"
               spy={true}
@@ -197,8 +198,8 @@ let Link = Scroll.Link;
               sx={styles.linkTag}
             >
               Featured Projects
-            </Link>
-            <Link
+            </LinkScroll>
+            <LinkScroll
               activeClass="active"
               to="FAQ"
               spy={true}
@@ -210,20 +211,13 @@ let Link = Scroll.Link;
               sx={styles.linkTag}
             >
               FAQ
-            </Link>
-      
+            </LinkScroll>
           </DrawerBody>
-
         </DrawerContent>
-
       </Drawer>
 
-      <Flex align="center">
-       
-      </Flex>
-   
+      <Flex align="center"></Flex>
     </Box>
-
   );
 };
 

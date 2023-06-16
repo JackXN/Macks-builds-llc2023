@@ -5,10 +5,15 @@ import { Providers } from "./providers";
 
 
 export const metadata = {
-  title: 'Macks Builds LLC',
-  description: 'Macks Builds LLC Construction company'
+  title: {
+    default: 'Macks Builds LLC',
+    template: '%s \ ',
+  },
+  description: 'We are dedicated to delivering quality solutions that bring your spaces to life. Whether youre looking to renovate your home, revamp your office, or create a stunning outdoor area, we have the expertise and passion to make it happen. Explore our range of services and let us help you transform your space into something extraordinary. Get ready to experience the power of quality craftsmanship and design excellence.',
+  creator: 'Jack Rigan',
+  keywords: ['Next.js', 'React', 'JavaScript', 'Macks Builds', 'Contracting Company in salt lake city utah', 'Contractor', 'Cheap Contracting', 'Salt Lake Contractors', 'Macks Builds LLC', 'Contracting Business'],
+  
 }
-
 
 // Loader
 import Loader from '../components/Loader';
