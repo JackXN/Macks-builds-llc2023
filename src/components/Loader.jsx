@@ -9,7 +9,7 @@ return (
   backgroundPosition='center' backgroundSize='cover' backgroundImage='/Loader.png'
   >
 <Box
-      width="90vw"
+      width="100vw"
       height="50vh"
       display="flex"
       justifyContent="center"
