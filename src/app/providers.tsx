@@ -43,8 +43,12 @@ const theme = extendTheme({
 
   styles: {
     global: {
+      body: {
+        overflowX: 'hidden',
+      },
       html: {
-        backgroundColor: "white"
+        backgroundColor: "white",
+        overflowX: 'hidden',
       },
       h1: {
         fontSize: ["35px"],

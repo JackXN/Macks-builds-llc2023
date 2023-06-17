@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Text, useBreakpointValue, Container } from "@chakra-ui/react";
 import MobileNav from "../components/containers/Navbar/MobileNav";
 import ServicesHome from "../components/containers/Services/ServicesHome";
 import AboutHome from "../components/containers/About/AboutHome";
@@ -14,6 +14,7 @@ import Footer from "../components/Footer";
 import Loader from "../components/Loader";
 import Contact from "../components/Contact";
 
+
 const Homepage = () => {
   const isMobile = useBreakpointValue({ base: true, lg: true });
 
@@ -23,7 +24,6 @@ const Homepage = () => {
         backgroundPosition="center"
         backgroundSize="cover"
         backgroundRepeat="no-repeat"
-        overlfowX="hidden"
       >
         <DesktopHero id="home" />
         <Hero id="home" />
@@ -53,7 +53,6 @@ const Homepage = () => {
         </Box>
         <Footer />
       </Box>
-    
     </>
   );
 };
