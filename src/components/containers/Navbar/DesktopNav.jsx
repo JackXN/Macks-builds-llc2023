@@ -1,7 +1,7 @@
 "use client"; 
 import React, {useEffect,useState} from 'react';
 import styles from "./DesktopStyles";
-// import Link from 'next/link'
+
 import {
   Box,
   Text,
@@ -12,15 +12,15 @@ import {
   List,
   Spacer, Button
 } from "@chakra-ui/react";
+import Link from 'next/link'
 import * as Scroll from 'react-scroll';
-
 import NavLinks from '../../../constants/index';
 
 
 
 const DesktopNav = () => {
-  let Link      = Scroll.Link;
-  const [bgColor, setBgColor] = useState('orange');
+  let ScrollLink      = Scroll.Link;
+  const [bgColor, setBgColor] = useState(null);
   const [scrollPos, setScrollPos] = useState(0);
 const [shadow, setShadow] = useState('md')
   useEffect(() => {
@@ -76,22 +76,22 @@ const [shadow, setShadow] = useState('md')
         <Flex sx={styles.rightContainer}>
           <List display="flex">
             <ListItem mr="20px" padding="10px 8px">
-              <Link style={{cursor: 'pointer'}} to="home" spy={true} smooth={true} offset={50} duration={500}>Home</Link>
+              <Link style={{cursor: 'pointer'}} href='/'>Home </Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-            <Link style={{cursor: 'pointer'}} to="about" spy={true} smooth={true} offset={50} duration={500}>About</Link>
+            <ScrollLink style={{cursor: 'pointer'}} to="about" spy={true} smooth={true} offset={50} duration={500}>About</ScrollLink>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-            <Link style={{cursor: 'pointer'}} to="services" spy={true} smooth={true} offset={50} duration={500}>Services</Link>
+            <ScrollLink style={{cursor: 'pointer'}} to="services" spy={true} smooth={true} offset={50} duration={500}>Services</ScrollLink>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-            <Link style={{cursor: 'pointer'}} to="contact" spy={true} smooth={true} offset={50} duration={500}>Contact</Link>
+            <ScrollLink style={{cursor: 'pointer'}} to="contact" spy={true} smooth={true} offset={50} duration={500}>Contact</ScrollLink>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-            <Link style={{cursor: 'pointer'}} to="projects" spy={true} smooth={true} offset={50} duration={500}>Featured Projects</Link>
+            <ScrollLink style={{cursor: 'pointer'}} to="projects" spy={true} smooth={true} offset={50} duration={500}>Featured Projects</ScrollLink>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-            <Link style={{cursor: 'pointer'}} to="faq" spy={true} smooth={true} offset={50} duration={500}>FAQ</Link>
+            <ScrollLink style={{cursor: 'pointer'}} to="faq" spy={true} smooth={true} offset={50} duration={500}>FAQ</ScrollLink>
             </ListItem>
             <ListItem>
            <Button padding='20px 20px' href='quote'>Get A Quote Today!</Button>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Text, Container, Spacer } from '@chakra-ui/react';
 import data from './data';
-import { ScrollAnimationWrapper } from 'react-scroll-animation';
 
-const ServicesHome = () => {
+
+const ServicesHome = ({props}) => {
   return (
     <Box
       height='100%'
@@ -14,7 +14,7 @@ const ServicesHome = () => {
       flexDirection='column'
       id='services'
     >
-      <Box sx={styles.title}>
+      <Box sx={styles.title} >
         <Text as='h3'>Our Advantage</Text>
         <Text as='h1' data-aos='fade-left'>We Provide The Best Service <br/> For All Home Projects</Text>
       </Box>
@@ -36,7 +36,7 @@ const ServicesHome = () => {
   );
 };
 
-const styles = {
+ export const styles = {
   title: {
     textAlign: 'center',
     mt: ['150px'],

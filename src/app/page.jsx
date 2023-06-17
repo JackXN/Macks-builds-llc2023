@@ -7,7 +7,7 @@ import {Text, Box} from '@chakra-ui/react';
 import HomePage from '../Layouts/Homepage';
 import Footer from '../components/Footer'
 import Loader from '../components/Loader';
-
+import Head from 'next/head';
 
 
 
@@ -21,7 +21,7 @@ export default function Home() {
     // Simulate a delay of 2000 milliseconds
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,13 +31,9 @@ export default function Home() {
 return (
   <>
   {isLoading ? <Loader/> :
-<>
     <HomePage/>
-    <Box alignContent='center' justifyContent='center' bg='red' flexDirection='column'>
-    {/* <Footer/> */}
-    </Box>
-</>
-  }
+  
+}
       
       </>
     );

@@ -1,7 +1,6 @@
 // app/providers.tsx
 "use client";
 
-
 //aos config
 import initializeAOS from '../../aos';
 
@@ -35,13 +34,21 @@ const breakpoints = [
   "1620px"
 ];
 
+
+
+
+
 const theme = extendTheme({
   breakpoints,
 
   styles: {
     global: {
+      body: {
+        overflowX: 'hidden',
+      },
       html: {
-        backgroundColor: "white"
+        backgroundColor: "white",
+        overflowX: 'hidden',
       },
       h1: {
         fontSize: ["35px"],
@@ -67,6 +74,9 @@ const theme = extendTheme({
         mt: ["25px"],
         mb: ["25px"],
         fontWeight: 'black'
+      },
+      Container:{
+        margin: '10px'
       }
     }
   }

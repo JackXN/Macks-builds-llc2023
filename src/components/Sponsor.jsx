@@ -24,7 +24,7 @@ const images = [
 const Sponsor = () => {
   return (
     <Box mt='150px'>
-      <Text as='h3'>We Proudly Support</Text>
+      <Text as='h3' color='gray.500'>We Proudly Support</Text>
       <Box sx={styles.logoContainer}>
         {images.map((item, index) => (
           <Box key={index} margin="20px" data-aos='fade-in' data-aos-duration='2000'>

@@ -3,17 +3,9 @@ import {Box,Text,Spinner} from '@chakra-ui/react';
 
 
 const Loader = () => {
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 200);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  return isLoading ? <Box height='100vh' 
+return (
+     <Box height='100vh' 
   backgroundPosition='center' backgroundSize='cover' backgroundImage='/Loader.png'
   >
 <Box
@@ -22,13 +14,15 @@ const Loader = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-    
+      padding='10px'
     >
-      <Spinner size="xl" color="orange" position='relative' top='425px' />
+      <Spinner boxSize={15} color="orange" position='relative' top='425px' />
     </Box>
 
 
-  </Box> : null;
+  </Box>
+)
+  
 };
 
 export default Loader;

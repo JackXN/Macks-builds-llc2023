@@ -1,13 +1,8 @@
 "use client";
 import React from 'react'
 import {Box, Text, Image, Button,Container} from '@chakra-ui/react';
-
+import Link from 'next/link'
 import Sponsor from '../../Sponsor';
-
-
-
-
-
 
 
 const AboutHome = () => {
@@ -18,11 +13,12 @@ const AboutHome = () => {
     <Text as='h1' data-aos='fade-left'>High Quality Construction Solutions & Reliable Contractors</Text>
     <Text as='p' data-aos='fade-down'>Embark on your next construction project with confidence! Discover a range of high-quality construction solutions and connect with reliable contractors who will bring your vision to life. Whether youre building a residential home, commercial space, or renovating an existing property, our trusted network of contractors ensures exceptional craftsmanship and timely delivery. Experience peace of mind knowing that our construction solutions and contractors prioritize quality, reliability, and customer satisfaction. Start your construction journey today and unlock the excellence your project deserves!</Text>
     <Box sx={styles.buttonContainer}> 
-    <Button>Read More</Button>
+    <Link href="/about" passHref>
+            <Button as="a">Read More</Button>
+          </Link>
     </Box>
-
     <Box>
-        <Sponsor/>
+    <Sponsor/>
     </Box>
 
     </Box>
