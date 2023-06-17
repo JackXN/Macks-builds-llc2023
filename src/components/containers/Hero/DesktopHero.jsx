@@ -47,9 +47,8 @@ const styles ={
        padding: '30px',
     //    left: ['150px'],
        top: ['100px'],
-       height:['120vh', '120vh', '100vh','100vh'],
+       height:['100vh', '100vh', '120vh','120vh'],
        flex: 2,
-    
         alignItems: 'center',
 
         h1: {
