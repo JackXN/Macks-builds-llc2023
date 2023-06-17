@@ -93,9 +93,7 @@ const [shadow, setShadow] = useState('md')
             <ListItem mr="20px" padding="10px 8px">
             <ScrollLink style={{cursor: 'pointer'}} to="faq" spy={true} smooth={true} offset={50} duration={500}>FAQ</ScrollLink>
             </ListItem>
-            <ListItem>
-           <Button padding='20px 20px' href='quote'>Get A Quote Today!</Button>
-            </ListItem>
+    
           </List>
         </Flex>
       </Box>

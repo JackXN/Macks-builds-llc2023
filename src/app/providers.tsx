@@ -44,7 +44,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        overflowX: 'hidden',
+        // overflowX: 'hidden',
       },
       html: {
         backgroundColor: "white",

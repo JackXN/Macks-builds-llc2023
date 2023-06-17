@@ -7,17 +7,20 @@ import Counter from './Counter';
 import MobileNav from '../Navbar/MobileNav';
 import Buttons from './Buttons';
 import DesktopImage from './DesktopImage';
+import Phone from '../../phone';
 
 
 const Index = () => {
   return (
     <>
     <Box height='100%'  backgroundImage='./HeroBgTwo.png'
+
     backgroundAttachment='fixed'
     flexDirection='column'
     display={["flex", "flex", "flex", "none", "none"]}
     >
     <MobileNav/>
+    <Phone/>
   <Box
   height='100vh'
   display={["flex", "flex", "flex", "none", "none"]}
