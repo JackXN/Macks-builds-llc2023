@@ -13,7 +13,7 @@ export const metadata = {
   creator: 'Jack Rigan',
   keywords: ['Next.js', 'React', 'JavaScript', 'Macks Builds', 'Contracting Company in salt lake city utah', 'Contractor', 'Cheap Contracting', 'Salt Lake Contractors', 'Macks Builds LLC', 'Contracting Business'],
   
-}
+};
 
 // Loader
 import Loader from '../components/Loader';

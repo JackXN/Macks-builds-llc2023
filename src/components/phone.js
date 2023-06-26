@@ -8,7 +8,7 @@ const phone = () => {
 <Flex direction='row' alignItems='center' justifyContent='center' color='white' textAlign='center'>
 <Box display='flex' flexDirection='row' justifyContent='center' alignItems='center'>
 <Text as='h2' display='flex' justifyContent='center'
-alignItems='center' fontWeight='lighter'>801-441-9433 <Phone style={{marginLeft: '10px', fontWeight: 'light'}}/> </Text>
+alignItems='center' fontWeight='lighter'><a href="tel:8014419433"> (801)-920-5724 </a> <Phone style={{marginLeft: '10px', fontWeight: 'light'}}/> </Text>
         </Box>
     </Flex>
   )

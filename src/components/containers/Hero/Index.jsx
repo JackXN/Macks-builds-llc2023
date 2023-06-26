@@ -8,7 +8,7 @@ import MobileNav from '../Navbar/MobileNav';
 import Buttons from './Buttons';
 import DesktopImage from './DesktopImage';
 import Phone from '../../phone';
-
+import LicenseButton from './LicenseButton'
 
 const Index = () => {
   return (
@@ -20,7 +20,7 @@ const Index = () => {
     display={["flex", "flex", "flex", "none", "none"]}
     >
     <MobileNav/>
-    <Phone/>
+    <Text as='p' alignSelf='center' color='gray'>License Pending</Text>
   <Box
   height='100vh'
   display={["flex", "flex", "flex", "none", "none"]}
@@ -37,10 +37,13 @@ const Index = () => {
   alignItems='center'
   zIndex={1}
   >
-    
+
+
     <Box sx={styles.textContainer}>
+    
         <Text as='h1'>Transforming Spaces <br/> & Delivering Quality</Text>
         <Text as='h3'>Your Premier Contracting Solution</Text>
+        <Phone/>
         <Box>
             <Text as='p'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolor non, dolorum sed corrupti deserunt eveniet rem? Voluptatum officia impedit, libero sed repudiandae error necessitatibus soluta ea ducimus quae delectus?

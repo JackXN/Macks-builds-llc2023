@@ -16,10 +16,12 @@ const images = [
 const SwiperComponent = () => {
   return (
     <>
-    <Box mb={['50px']} id='projects'>
+    <Box bg='#232632' pb='50'>
+    <Box mb={['50px']} id='projects' paddingBottom='30px' marginBottom='30px'>
    <Text as='h3'>Our Work</Text>
    <Text as='h1' color='white' data-aos='fade-left'>Featured Projects</Text>
    </Box>
+   <Box marginBottom='50px'>
     <Swiper
       slidesPerView={1}
       navigation
@@ -49,6 +51,8 @@ const SwiperComponent = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+    </Box>
+    </Box>
     </>
   );
 };

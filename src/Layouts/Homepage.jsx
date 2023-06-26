@@ -14,7 +14,6 @@ import Footer from "../components/Footer";
 import Loader from "../components/Loader";
 import Contact from "../components/Contact";
 
-
 const Homepage = () => {
   const isMobile = useBreakpointValue({ base: true, lg: true });
 
@@ -32,25 +31,15 @@ const Homepage = () => {
         <Box
           backgroundColor="#232632"
           textAlign="center"
-          height="100%"
+          height="80vh"
           pt="50px"
         >
           <HomeProjects />
           <Box mt="50px">
-            <Text as="h3">Testimonials</Text>
-            <Text as="h1" color="white" data-aos="fade-left">
-              See What Our Customers <br /> Are Saying About Us
-            </Text>
-            <Testimonial />
-          </Box>
-
-          <Box bg="white" pt="50px">
             <FAQ />
           </Box>
         </Box>
-        <Box padding='50px'>
         <Contact />
-        </Box>
         <Footer />
       </Box>
     </>

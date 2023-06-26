@@ -53,6 +53,8 @@ const ServicesHome = ({props}) => {
     mt: ['50px'],
     display: 'flex',
     flexWrap: 'wrap',
+    padding: '30px',
+    
     justifyContent: 'center', // Added to horizontally center the boxes
     alignItems: 'center', // Added to make boxes have equal height
   },

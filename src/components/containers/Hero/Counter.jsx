@@ -11,18 +11,14 @@ const Counter = () => {
   
 <Box sx={styles.counterBox}>
   <Box sx={styles.count}>
-  <CountUp end={10} duration={5}/> 
+  <CountUp end={30} duration={5}/> 
   +
   </Box>
   <Box sx={styles.countText}>
     Years <br/> Of Experience
   </Box>
 </Box>
-
-
 <Spacer/>
-
-
 <Box sx={styles.counterBox}>
   <Box sx={styles.count}>
   <CountUp end={50} duration={5}/>

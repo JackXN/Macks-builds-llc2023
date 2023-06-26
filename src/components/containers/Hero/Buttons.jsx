@@ -1,32 +1,33 @@
 import React from 'react';
 import { Box, Button } from '@chakra-ui/react';
-import { Link } from 'react-scroll';
+import Link from 'next/link'
+import {Link as ScrollLink} from 'react-scroll';
+
 
 const Buttons = () => {
   return (
     <Box sx={styles.buttonContainer}>
-      <Link
+      <ScrollLink
         activeClass="active"
         to="services"
         spy={true}
         smooth={true}
         offset={50}
         duration={500}
+        cursor='pointer'
       >
         <Button bg="#D9C05B" color="white">
           Our Services
         </Button>
-      </Link>
+      </ScrollLink>
       <Link
         activeClass="active"
-        to="projects"
-        spy={true}
-        smooth={true}
+        href='https://www.dopl.utah.gov'
         offset={50}
-        duration={500}
+        target='_blank'
       >
         <Button color="#D9C05B" bg="none">
-          Featured Projects
+         Licensing Provider
         </Button>
       </Link>
     </Box>

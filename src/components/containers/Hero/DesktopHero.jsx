@@ -4,7 +4,8 @@ import DesktopImage from './DesktopImage';
 import DesktopNav from "../Navbar/DesktopNav";
 import Counter from "./Counter";
 import Buttons from "./Buttons";
-import {BsFillTelephoneFill as Phone} from 'react-icons/bs';
+import Phone from '../../phone';
+// import {BsFillTelephoneFill as MobilePhone} from 'react-icons/bs';
 
 const DesktopHero = () => {
     const gradientColors = ["#242733", "#1D1D27"];
@@ -14,15 +15,18 @@ const DesktopHero = () => {
     <Box display={['none', 'none', 'none', 'flex']} flexDirection='column'  position='relative' >
         {/* <Text as='h2' color='white'>Give Us A Call</Text> */}
     </Box>
-    <Flex  background={`linear-gradient(to bottom, ${gradientColors[0]}, ${gradientColors[1]})`} position='relative'    height='150vh' display={["none", "none", "none", "flex", "flex"]}>
+    <Flex  background={`linear-gradient(to bottom, ${gradientColors[0]}, ${gradientColors[1]})`} position='relative'    height='125vh' display={["none", "none", "none", "flex", "flex"]}>
        
 <Box sx={styles.hero} id='home'>
+
     <Box sx={styles.heroText}>
+    
 <Text as='h1' fontSize='50px'>Transforming Spaces <br/> & Delivering Quality</Text>
         <Text as='h3'>Your Premier Contracting Solution</Text>
             <Text as='p' color='white'>
             We are dedicated to delivering quality solutions that bring your spaces to life. Whether youre looking to renovate your home, revamp your office, or create a stunning outdoor area, we have the expertise and passion to make it happen. Explore our range of services and let us help you transform your space into something extraordinary. Get ready to experience the power of quality craftsmanship and design excellence.
             </Text>
+
             </Box>
             <Buttons/>
             <Box position='relative' display='flex' bottom= '80px'>
