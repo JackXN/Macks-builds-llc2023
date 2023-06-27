@@ -39,9 +39,10 @@ const Homepage = () => {
             <FAQ />
           </Box>
         </Box>
-        <Contact />
-        <Footer />
+    
+     
       </Box>
+  
     </>
   );
 };

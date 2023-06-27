@@ -1,125 +1,168 @@
-import { Fragment } from 'react';
+"use client";
+
 import {
   Container,
+  Flex,
+  Box,
+  Heading,
+  Text,
+  IconButton,
+  Button,
+  VStack,
+  HStack,
+  Wrap,
+  WrapItem,
   FormControl,
   FormLabel,
   Input,
+  InputGroup,
+  InputLeftElement,
   Textarea,
-  Stack,
-  Button,
-  Heading,
-  useColorModeValue,
-  VStack,
-  Flex,
-  Text,
-  Icon,
-  Divider
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
-import { GoLocation } from 'react-icons/go';
-import { BsPhone } from 'react-icons/bs';
-import { HiOutlineMail } from 'react-icons/hi';
+import {
+  MdPhone,
+  MdEmail,
+  MdLocationOn,
+  MdFacebook,
+  MdOutlineEmail,
+} from 'react-icons/md';
+import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
 
-const contactOptions = [
-  {
-    label: 'Address',
-    value: 'A108 Adam Street, NY 535022, USA',
-    icon: GoLocation
-  },
-  {
-    label: 'PHONE NUMBER',
-    value: '+1 5589 55488 55',
-    icon: BsPhone
-  },
-  {
-    label: 'EMAIL',
-    value: 'info@example.com',
-    icon: HiOutlineMail
-  }
-];
-
-const Contact = () => {
+export default function Contact() {
   return (
-    <Container maxW="7xl" padding={[null, null,null,null,'50px']} mt='60rem' id='contact'>
-      <Stack spacing={10}>
-        <Flex align="center" justify="center" direction="column">
-          <Heading fontSize="4xl" mb={2}>
-            Still Have Questions? 
-            <br/>
-            Get In Touch With Us
-          </Heading>
-         
-        </Flex>
-        <Stack
-          spacing={{ base: 6, md: 0 }}
-          direction={{ base: 'column', md: 'row' }}
-          justify="space-between"
-        >
-          {contactOptions.map((option, index) => (
-            <Fragment key={index}>
-              <Stack spacing={3} direction="column" justify="center" alignItems="center" px={3}>
-                <Icon as={option.icon} w={10} h={10} color="yellow.400" />
-                
-                {/* <Text fontSize="md" textAlign="center">
-                  {option.value}
-                </Text> */}
-              </Stack>
-              {contactOptions.length - 1 !== index && (
-                <Flex d={{ base: 'none', md: 'flex' }}>
-                  <Divider orientation="vertical" />
-                </Flex>
-              )}
-            </Fragment>
-          ))}
-        </Stack>
-        <VStack
-          as="form"
-          spacing={8}
-          padding='50px'
-          w="100%"
-          bg={useColorModeValue('white', 'gray.700')}
-          rounded="lg"
-          boxShadow="lg"
-          p={{ base: 5, sm: 10 }}
-        >
-          <VStack spacing={4} w="100%">
-            <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
-              <FormControl id="name">
-                <FormLabel>Name</FormLabel>
-                <Input type="text" placeholder="Ryan" rounded="md" />
-              </FormControl>
-              <FormControl id="email">
-                <FormLabel>Email</FormLabel>
-                <Input type="email" placeholder="ryan@email.com" rounded="md" />
-              </FormControl>
-            </Stack>
-            <FormControl id="subject">
-              <FormLabel>Subject</FormLabel>
-              <Input type="text" placeholder="Roofing, Flooring..." rounded="md" />
-            </FormControl>
-            <FormControl id="message">
-              <FormLabel>Message</FormLabel>
-              <Textarea size="lg" placeholder="Enter your message" rounded="md" />
-            </FormControl>
-          </VStack>
-          <VStack w="100%">
-            <Button
-              bg="yellow.300"
-              color="white"
-              _hover={{
-                bg: 'green.500'
-              }}
-              rounded="md"
-              w={{ base: '100%', md: 'max-content' }}
-              mb='50px'
-            >
-              Send Message
-            </Button>
-          </VStack>
-        </VStack>
-      </Stack>
+    <Container bg="#9DC4FB" maxW="full" mt={0} centerContent overflow="hidden">
+      <Flex>
+        <Box
+          bg="#02054B"
+          color="white"
+          borderRadius="lg"
+          m={{ sm: 4, md: 16, lg: 10 }}
+          p={{ sm: 5, md: 5, lg: 16 }}>
+          <Box p={4}>
+            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+              <WrapItem>
+                <Box>
+                  <Heading>Contact</Heading>
+                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
+                    Fill up the form below to contact
+                  </Text>
+                  <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                    <VStack pl={0} spacing={3} alignItems="flex-start">
+                      <Button
+                        size="md"
+                        height="48px"
+                        width="200px"
+                        variant="ghost"
+                        color="#DCE2FF"
+                        _hover={{ border: '2px solid #1C6FEB' }}
+                        leftIcon={<MdPhone color="#1970F1" size="20px" />}>
+                        +91-988888888
+                      </Button>
+                      <Button
+                        size="md"
+                        height="48px"
+                        width="200px"
+                        variant="ghost"
+                        color="#DCE2FF"
+                        _hover={{ border: '2px solid #1C6FEB' }}
+                        leftIcon={<MdEmail color="#1970F1" size="20px" />}>
+                        hello@abc.com
+                      </Button>
+                      <Button
+                        size="md"
+                        height="48px"
+                        width="200px"
+                        variant="ghost"
+                        color="#DCE2FF"
+                        _hover={{ border: '2px solid #1C6FEB' }}
+                        leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
+                        Karnavati, India
+                      </Button>
+                    </VStack>
+                  </Box>
+                  <HStack
+                    mt={{ lg: 10, md: 10 }}
+                    spacing={5}
+                    px={5}
+                    alignItems="flex-start">
+                    <IconButton
+                      aria-label="facebook"
+                      variant="ghost"
+                      size="lg"
+                      isRound={true}
+                      _hover={{ bg: '#0D74FF' }}
+                      icon={<MdFacebook size="28px" />}
+                    />
+                    <IconButton
+                      aria-label="github"
+                      variant="ghost"
+                      size="lg"
+                      isRound={true}
+                      _hover={{ bg: '#0D74FF' }}
+                      icon={<BsGithub size="28px" />}
+                    />
+                    <IconButton
+                      aria-label="discord"
+                      variant="ghost"
+                      size="lg"
+                      isRound={true}
+                      _hover={{ bg: '#0D74FF' }}
+                      icon={<BsDiscord size="28px" />}
+                    />
+                  </HStack>
+                </Box>
+              </WrapItem>
+              <WrapItem>
+                <Box bg="white" borderRadius="lg">
+                  <Box m={8} color="#0B0E3F">
+                    <VStack spacing={5}>
+                      <FormControl id="name">
+                        <FormLabel>Your Name</FormLabel>
+                        <InputGroup borderColor="#E0E1E7">
+                          <InputLeftElement
+                            pointerEvents="none"
+                            children={<BsPerson color="gray.800" />}
+                          />
+                          <Input type="text" size="md" />
+                        </InputGroup>
+                      </FormControl>
+                      <FormControl id="name">
+                        <FormLabel>Mail</FormLabel>
+                        <InputGroup borderColor="#E0E1E7">
+                          <InputLeftElement
+                            pointerEvents="none"
+                            children={<MdOutlineEmail color="gray.800" />}
+                          />
+                          <Input type="text" size="md" />
+                        </InputGroup>
+                      </FormControl>
+                      <FormControl id="name">
+                        <FormLabel>Message</FormLabel>
+                        <Textarea
+                          borderColor="gray.300"
+                          _hover={{
+                            borderRadius: 'gray.300',
+                          }}
+                          placeholder="message"
+                        />
+                      </FormControl>
+                      <FormControl id="name" float="right">
+                        <Button
+                          variant="solid"
+                          bg="#0D74FF"
+                          color="white"
+                          _hover={{}}>
+                          Send Message
+                        </Button>
+                      </FormControl>
+                    </VStack>
+                  </Box>
+                </Box>
+              </WrapItem>
+            </Wrap>
+          </Box>
+        </Box>
+      </Flex>
     </Container>
   );
-};
-
-export default Contact;
+}

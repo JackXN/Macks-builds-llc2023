@@ -9,6 +9,7 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from '@chakra-ui/react';
+import Footer from './Footer';
 
 
 const LeftContainer = () => {
@@ -74,7 +75,8 @@ const FAQ = () => {
 
 
   return (
-    // <Container display='flex' >
+<>
+    {/* // <Container display='flex' > */}
       <Box maxW="2xl" mx="auto" mt='150px' id='faq'>
         <Text as="h2" fontSize="2xl" fontWeight="bold" mb={6} color="black">
           Frequently Asked Questions
@@ -112,8 +114,8 @@ const FAQ = () => {
           ))}
         </Accordion>
       </Box>
-   
-
+  <Footer/>   
+</>
   );
 };
 
