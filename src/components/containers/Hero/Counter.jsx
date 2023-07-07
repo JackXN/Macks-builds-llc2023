@@ -21,7 +21,7 @@ const Counter = () => {
 <Spacer/>
 <Box sx={styles.counterBox}>
   <Box sx={styles.count}>
-  <CountUp end={50} duration={5}/>
+  <CountUp end={0} duration={5}/>
   +
   </Box>
 <Box sx={styles.countText}>
