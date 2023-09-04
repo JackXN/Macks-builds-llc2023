@@ -20,7 +20,9 @@ const Index = () => {
     display={["flex", "flex", "flex", "none", "none"]}
     >
     <MobileNav/>
-    <Text as='p' alignSelf='center' color='gray'>License Pending</Text>
+    <Text as='p' alignSelf='center' color='gray'>Licensed In The State Of Utah <br/>
+    #13487920-5501
+     </Text>
   <Box
   height='100vh'
   display={["flex", "flex", "flex", "none", "none"]}
@@ -45,9 +47,6 @@ const Index = () => {
         <Text as='h3'>Your Premier Contracting Solution</Text>
         <Phone/>
         <Box>
-            <Text as='p'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolor non, dolorum sed corrupti deserunt eveniet rem? Voluptatum officia impedit, libero sed repudiandae error necessitatibus soluta ea ducimus quae delectus?
-            </Text>
         </Box>
         <Buttons/>
         <Box position='relative' display='flex' bottom= '80px'>

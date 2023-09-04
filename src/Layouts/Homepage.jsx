@@ -12,7 +12,6 @@ import DesktopHero from "../components/containers/Hero/DesktopHero";
 import DesktopNav from "@/components/containers/Navbar/DesktopNav";
 import Footer from "../components/Footer";
 import Loader from "../components/Loader";
-import Contact from "../components/Contact";
 
 const Homepage = () => {
   const isMobile = useBreakpointValue({ base: true, lg: true });

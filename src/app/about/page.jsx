@@ -2,7 +2,6 @@
 import React from 'react';
 import {Container, Box,Text, Image,Flex} from '@chakra-ui/react';
 import Nav from '../../components/containers/Navbar/nav';
-import Contact from '../../components/Contact';
 import data from './data';
 import Features from './Features';
 import Footer from '../../components/Footer';
@@ -48,7 +47,7 @@ const titlesToDisplay=[1,2];
         <Image src='/wireframeHouse.png' data-aos='fade-right' height='50%' width='50%' alt='wireframe photo' />
     </Flex>
     <Features/>
-<Contact data-aos='fade-up'/>
+
 
 <Footer/>
 

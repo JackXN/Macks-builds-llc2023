@@ -72,14 +72,13 @@ const [shadow, setShadow] = useState('md')
           />
         </Flex>
         <Spacer />
-  
         <Flex sx={styles.rightContainer}>
           <List display="flex">
             <ListItem mr="20px" padding="10px 8px">
               <Link style={{cursor: 'pointer'}} href='/'>Home </Link>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
-            <ScrollLink style={{cursor: 'pointer'}} to="about" spy={true} smooth={true} offset={50} duration={500}>About</ScrollLink>
+            <ScrollLink style={{cursor: 'pointer'}} to="faq" spy={true} smooth={true} offset={50} duration={500}>About us</ScrollLink>
             </ListItem>
             <ListItem mr="20px" padding="10px 8px">
             <ScrollLink style={{cursor: 'pointer'}} to="services" spy={true} smooth={true} offset={50} duration={500}>Services</ScrollLink>
