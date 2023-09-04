@@ -13,7 +13,7 @@ const data = [
     description: "Transform your living space with our remodeling and renovation services. From kitchen and bathroom upgrades to room additions, we provide expert craftsmanship and attention to detail.",
     icon: <Building />,
     animation: 'fadeIn',
-    color: 'gray'
+    color:'white'
   },
   {
     id: 3,
@@ -21,14 +21,14 @@ const data = [
     description: "Add a fresh look to your home with our painting and finishing services. Our team provides professional interior and exterior painting, along with precise finishing touches.",
     icon: <Paint/>,
     animation: 'fadeIn',
-    color: 'lightred',
+    color:'white'
 },
 {
   id: 4,
   title: 'Flooring Services',
   description: 'Enhance the aesthetics and comfort of your home with our flooring services. We offer a wide range of options, including hardwood, tile, carpet, and laminate flooring installations.',
 icon: <Flooring/>,
-color: 'red',
+color: 'white',
   
 },
 {
@@ -36,7 +36,7 @@ color: 'red',
   title: 'Deck & Patio Construction',
   description: 'Create an inviting outdoor space with our deck and patio construction services. We design and build custom decks and patios that enhance your homes functionality and curb appeal.',
 icon: <Balcony/>,
-color: 'brown'
+color: 'white'
   
 },
 // {

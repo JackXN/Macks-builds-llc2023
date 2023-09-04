@@ -20,8 +20,8 @@ const Index = () => {
     display={["flex", "flex", "flex", "none", "none"]}
     >
     <MobileNav/>
-    <Text as='p' alignSelf='center' color='gray'>Licensed In The State Of Utah <br/>
-    #13487920-5501
+    <Text as='p' fontSize='18px' alignSelf='center'  textAlign='center' color='gray'>Licensed In The State Of Utah <br/>
+    # 13487920-5501
      </Text>
   <Box
   height='100vh'

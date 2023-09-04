@@ -16,7 +16,7 @@ const Buttons = () => {
         duration={500}
         cursor='pointer'
       >
-        <Button bg="#D9C05B" color="white">
+        <Button bg="#D9C05B" color="white" cursor='pointer'>
           Our Services
         </Button>
       </ScrollLink>
